@@ -1,0 +1,33 @@
+code value, operation, description
+00000,OutputA,sends input 1 as output
+00001,OutputB,sends input 2 as output
+00010,AddUnsigned,adds A and B as unsigned numbers
+00011,AddSigned,adds A and B as signed numbers
+00100,SubtractAB,subtracts B from A (assumes A is first)
+00101,SubtractBA,subtracts A from B (assumes B is first)
+00110,LSLA,Logical Shift Left A
+00111,LSRA,Logical Shift Right A
+01000,LSLB,Logical Shift Left B
+01001,LSRB,Logical Shift Right B
+01010,ASLA,Arithmetic Shift Left A
+01011,ASRA,Arithmetic Shift Right A
+01100,ASLB,Arithmetic Shift Left B
+01101,ASRB,Arithmetic Shift Right B
+01110,ALTB,Check if A is less than B (A < B)
+01111,BLTA,Check if B is less than A (B < A)
+10000,AEQB,Check if A is equal to B (A = B)
+10001,OneCompA,One's Complement of A
+10010,OneCompB,One's Complement of B
+10011,TwoCompA,Two's Complement of A
+10100,TwoCompB,Two's Complement of B
+10101,MultUnsigned,Multiply A and B (treat as unsigned)
+10110,MultSigned,Multiply A and B (treat as signed)
+10111,AANDB,Bitwise AND operation of A and B
+11000,AORB,Bitwise OR operation of A and B
+11001,AXORB,Bitwise XOR operation of A and B
+11010,ANORB,Bitwise NOR operation of A and B
+11011,AXNORB,Bitwise XNOR operation of A and B
+11100,TBD1,Unused OP Code
+11101,TBD2,Unused OP Code
+11110,TBD3,Unused OP Code
+11111,TBD4,Unused OP Code
