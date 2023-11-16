@@ -179,15 +179,27 @@ begin
 
             when ALTB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= x"00000001" when A < B else x"00000000";
+                if A < B then 
+                    SIG_Result_Low <= x"00000001";
+                else 
+                    SIG_Result_Low <= x"00000000";
+                end if;
 
             when BLTA         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= x"00000001" when B < A else x"00000000";
+                if B < A then 
+                    SIG_Result_Low <= x"00000001";
+                else 
+                    SIG_Result_Low <= x"00000000";
+                end if;
 
             when AEQB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= x"00000001" when A = B else x"00000000";
+                if A = B then 
+                    SIG_Result_Low <= x"00000001";
+                else 
+                    SIG_Result_Low <= x"00000000";
+                end if;
 
             when OneCompA     =>
                 -- STATUS: UNTESTED

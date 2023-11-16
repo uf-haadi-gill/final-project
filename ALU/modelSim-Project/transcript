@@ -31,3 +31,9 @@
 # Compile of ALU_Main.vhd failed with 9 errors.
 # Compile of ALU_Main_TB.vhd was successful.
 # 2 compiles, 1 failed with 9 errors.
+# Compile of ALU_Main.vhd failed with 3 errors.
+# Compile of ALU_Main_TB.vhd was successful.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# 2 compiles, 0 failed with no errors.
