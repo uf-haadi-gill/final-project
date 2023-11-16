@@ -113,9 +113,9 @@ architecture logic of ALU_Main is
 
 begin
     -- always assign outputs to signal values
-    Result_Low   = SIG_Result_Low;
-    Result_High  = SIG_Result_High;
-    Branch_Taken = SIG_branch;
+    Result_Low   <= SIG_Result_Low;
+    Result_High  <= SIG_Result_High;
+    Branch_Taken <= SIG_branch;
     
     -- process statement to run when any inputs change
     process (A, B, Shift_Amount, OP_Select)
