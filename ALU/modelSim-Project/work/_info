@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -15,7 +16,7 @@ Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 12
+!i122 15
 Z5 dC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/modelSim-Project
 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd
 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd
@@ -25,36 +26,59 @@ V<^i^KlQ@KJ3Hm6`NRQGT_1
 !s100 3BAM=jFdeljP:Co=Se1Dl2
 Z6 OV;C;2020.1;71
 32
-!s110 1700106589
+Z7 !s110 1700106818
 !i10b 1
-!s108 1700106588.000000
+Z8 !s108 1700106818.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd|
 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd|
 !i113 1
-Z7 o-work work -2002 -explicit
-Z8 tExplicit 1 CvgOpt 0
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
 Ealu_main_tb
-w1700085015
+Z11 w1700106813
 R0
 R1
 R2
 R3
 R4
-!i122 14
+!i122 16
 R5
-8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd
-FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd
+Z12 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd
+Z13 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd
 l0
 L6 1
 Vkd@Nn17d1zZ_46V@jfde;1
 !s100 2[efD8ZLXFzF_W6U4C<?d0
 R6
 32
-!s110 1700106590
+R7
 !i10b 1
-!s108 1700106589.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd|
+R8
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd|
 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd|
 !i113 1
+R9
+R10
+Alogic
+DEx4 work 8 alu_main 0 22 <^i^KlQ@KJ3Hm6`NRQGT_1
+R0
+R1
+R2
+R3
+R4
+DEx4 work 11 alu_main_tb 0 22 kd@Nn17d1zZ_46V@jfde;1
+!i122 16
+l14
+L10 34
+V6Bo]B[N;d4>KBd6Q:c4h=0
+!s100 mKfzllf9BiO:2b>?;4SJT1
+R6
+32
 R7
+!i10b 1
 R8
+R14
+Z15 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main_TB.vhd|
+!i113 1
+R9
+R10

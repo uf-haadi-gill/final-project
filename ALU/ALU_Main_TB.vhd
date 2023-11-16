@@ -12,7 +12,7 @@ architecture logic of ALU_Main_TB is
     signal shiftAmount, opSelect                 : std_logic_vector(4 downto 0)  := (others => '0');
     signal branchTaken                           : std_logic                     := '0';
 begin
-    ALU_inst : work.ALU_Main 
+    ALU_inst : entity work.ALU_Main 
     port map(
         A            => input1,
         B            => input2,

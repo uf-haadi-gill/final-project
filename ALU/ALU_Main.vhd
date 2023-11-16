@@ -118,7 +118,7 @@ begin
     Branch_Taken = SIG_branch;
     
     -- process statement to run when any inputs change
-    process (ALU_IN_1, ALU_IN_2, Shift_Amount, OP_Select)
+    process (A, B, Shift_Amount, OP_Select)
     begin
         -- Reset all signal values, only overwrite if needed 
         SIG_Result_Low  <= (others => '0');
