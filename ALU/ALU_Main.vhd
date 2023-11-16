@@ -208,13 +208,13 @@ begin
             when MultUnsigned =>
                 -- STATUS: UNTESTED
                 SIG_Mult_Result <= std_logic_vector(unsigned(A) * unsigned(B));
-                SIG_Result_High <= SIG_Mult_Result(63 downto 31);
+                SIG_Result_High <= SIG_Mult_Result(63 downto 32);
                 SIG_Result_Low  <= SIG_Mult_Result(31 downto 0);
 
             when MultSigned   =>
                 -- STATUS: UNTESTED
                 SIG_Mult_Result <= std_logic_vector(unsigned(A) * unsigned(B));
-                SIG_Result_High <= SIG_Mult_Result(63 downto 31);
+                SIG_Result_High <= SIG_Mult_Result(63 downto 32);
                 SIG_Result_Low  <= SIG_Mult_Result(31 downto 0);
 
             when AANDB        =>
