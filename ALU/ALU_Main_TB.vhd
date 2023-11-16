@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-use iee.numeric_logic.all;
+use ieee.numeric_std.all;
 
 entity ALU_Main_TB is 
 end entity;
@@ -29,11 +29,11 @@ begin
             for j in 0 to 255 loop    -- B
                 for k in 0 to 31 loop -- op code
 
-                    input1   <= to_unsigned(i);
-                    input2   <= to_unsigned(j);
-                    opSelect <= to_unsigned(k);
+                    input1   <= std_logic_vector(to_unsigned(i, 32));
+                    input2   <= std_logic_vector(to_unsigned(j, 32));
+                    opSelect <= std_logic_vector(to_unsigned(k, 5));
 
-                    wait 20 ns;
+                    wait for 20 ns;
 
                 end loop; -- k
             end loop; -- j
