@@ -179,15 +179,15 @@ begin
 
             when ALTB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= "$00000001" when A < B else "$00000000";
+                SIG_Result_Low <= x"00000001" when A < B else x"00000000";
 
             when BLTA         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= "$00000001" when B < A else "$00000000";
+                SIG_Result_Low <= x"00000001" when B < A else x"00000000";
 
             when AEQB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= "$00000001" when A = B else "$00000000";
+                SIG_Result_Low <= x"00000001" when A = B else x"00000000";
 
             when OneCompA     =>
                 -- STATUS: UNTESTED
