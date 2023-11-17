@@ -9,10 +9,10 @@ end ALU_Main_Deliverable_TB;
 architecture TB of ALU_Main_Deliverable_TB is
 	signal A   : std_logic_vector(31 downto 0) := (others=>'0');
     signal B   : std_logic_vector(31 downto 0) := (others=>'0');
-    signal Op_Sel : std_logic_vector(4 downto 0) := (others=>'0');
+    signal OP_Select : std_logic_vector(4 downto 0) := (others=>'0');
     signal Shift_Amount : std_logic_vector(4 downto 0) := (others=>'0');
-    signal Result_Low_Low   : std_logic_vector(31 downto 0);
-    signal Result_Low_High : std_logic_vector(31 downto 0);
+    signal Result_Low   : std_logic_vector(31 downto 0);
+    signal Result_High : std_logic_vector(31 downto 0);
     signal Branch_Taken   : std_logic := '0';
 	 
 begin --TB
@@ -20,17 +20,17 @@ begin --TB
         port map (
 			A   => A,
 			B   => B,
-			Shift_Amount => ShiftAmount,
-			Op_Sel => OP_Sel 
-			Result_Low_Low   => Result_Low_Low,
-			Result_Low_High => Result_Low_High,
+			Shift_Amount => Shift_Amount,
+			OP_Select => OP_Select,
+			Result_Low   => Result_Low,
+			Result_High => Result_High,
 			Branch_Taken   => Branch_Taken
 		);
     process
     begin --process
         
 		  --ADD
-		  OP_Sel <= "00000"; 
+		  OP_Select <= "00010"; 
         A <= conv_std_logic_vector(10, A'length);
         B <= conv_std_logic_vector(15, B'length);
         wait for 20 ns;
@@ -39,7 +39,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in ADD" severity warning;
 		  
 		  --SUB
-		  OP_Sel <= "00001"; 
+		  OP_Select <= "00100"; 
         A <= conv_std_logic_vector(25, A'length);
         B <= conv_std_logic_vector(10, B'length);
         wait for 20 ns;
@@ -48,7 +48,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in SUB" severity warning;
 		  
 		  --MULT (signed)
-		  OP_Sel <= "00010"; 
+		  OP_Select <= "10110"; 
         A <= conv_std_logic_vector(10, A'length);
         B <= conv_std_logic_vector(-4, B'length);
         wait for 20 ns;
@@ -57,7 +57,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in MULT (signed)" severity warning;
 		  
 		  --MULT (unsigned)
-		  OP_Sel <= "00011"; 
+		  OP_Select <= "10101"; 
         A <= conv_std_logic_vector(65536, A'length);
         B <= conv_std_logic_vector(131072, B'length);
         wait for 20 ns;
@@ -66,7 +66,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in MULT (unsigned)" severity warning;
 		  
 		  --AND
-		  OP_Sel    <= "00100"; 
+		  OP_Select    <= "10111"; 
         A <= conv_std_logic_vector(65535, A'length);
         B <= "11111111111111110001001000110100";
         wait for 20 ns;
@@ -75,34 +75,34 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in AND" severity warning;
 		  
 		  --right logical
-		  OP_Sel    <= "00111";  
+		  OP_Select    <= "00111";  
         A <= conv_std_logic_vector(15, A'length);
-		  ShiftAmount<=conv_std_logic_vector(4, ShiftAmount'length);
+		  Shift_Amount<=conv_std_logic_vector(4, Shift_Amount'length);
         wait for 20 ns;
         assert(Result_Low = conv_std_logic_vector(0, Result_Low'length)) report "Error: right logical Result_Low Wrong" severity warning;
         assert(Result_High = conv_std_logic_vector(0, Result_High'length)) report "Error: Result_High Wrong in right logical" severity warning;
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in right logical" severity warning;
 		  
 		  --right arithmetic
-		  OP_Sel    <= "01001"; 
+		  OP_Select    <= "01011"; 
         A <= "11110000000000000000000000001000";
-		  ShiftAmount<=conv_std_logic_vector(1, ShiftAmount'length);
+		  Shift_Amount<=conv_std_logic_vector(1, Shift_Amount'length);
         wait for 20 ns;
         assert(Result_Low = "11111000000000000000000000000100") report "Error: right arithmetic Result_Low Wrong" severity warning;
         assert(Result_High = conv_std_logic_vector(0, Result_High'length)) report "Error: Result_High Wrong in right arithmetic" severity warning;
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in right arithmetic"severity warning;
 		  
 		  --right arithmetic
-		  OP_Sel    <= "01001"; 
+		  OP_Select    <= "01011"; 
         A <= conv_std_logic_vector(8, A'length);
-		  ShiftAmount<=conv_std_logic_vector(1, ShiftAmount'length);
+		  Shift_Amount<=conv_std_logic_vector(1, Shift_Amount'length);
         wait for 20 ns;
         assert(Result_Low = conv_std_logic_vector(4, Result_Low'length)) report "Error: right arithmetic Result_Low Wrong" severity warning;
         assert(Result_High = conv_std_logic_vector(0, Result_High'length)) report "Error: Result_High Wrong in right arithmetic" severity warning;
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in right arithmetic"severity warning;
 		  
 		  --set on less than
-		  OP_Sel    <= "01011"; 
+		  OP_Select    <= "01110"; 
         A <= conv_std_logic_vector(10, A'length);
         B <= conv_std_logic_vector(15, B'length);
         wait for 20 ns;
@@ -111,7 +111,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in set on less than"severity warning;
 		  
 		  --set on less than
-		  OP_Sel    <= "01011"; 
+		  OP_Select    <= "01110"; 
         A <= conv_std_logic_vector(15, A'length);
         B <= conv_std_logic_vector(10, B'length);
         wait for 20 ns;
@@ -120,7 +120,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in set on less than"severity warning;
 		  
 		  --branch if less than or equal to 0
-		  OP_Sel    <= "01110"; 
+		  OP_Select    <= "11101"; 
         A <= conv_std_logic_vector(5, A'length);
         wait for 20 ns;
         assert(Result_Low = conv_std_logic_vector(0, Result_Low'length)) report "Error: branch if less than or equal to 0 Result_Low Wrong" severity warning;
@@ -128,7 +128,7 @@ begin --TB
 		  assert(Branch_Taken = '0') report "Error: Branch Taken wrong in branch if less than or equal to 0"severity warning;
 		  
 		  --branch if greather than 0
-		  OP_Sel    <= "01111"; 
+		  OP_Select    <= "11111"; 
         A <= conv_std_logic_vector(5, A'length);
         wait for 20 ns;
         assert(Result_Low = conv_std_logic_vector(0, Result_Low'length)) report "Error: branch if greather than 0 Result_Low Wrong" severity warning;

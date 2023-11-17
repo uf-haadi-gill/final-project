@@ -97,28 +97,28 @@ architecture logic of ALU_Main is
     constant ANORB        : std_logic_vector(4 downto 0) := "11010";
     -- Bitwise XNOR operation of A and B
     constant AXNORB       : std_logic_vector(4 downto 0) := "11011";
-    -- Unused Code
-    constant TBD1         : std_logic_vector(4 downto 0) := "11100";
-    -- Unused Code
-    constant TBD2         : std_logic_vector(4 downto 0) := "11101";
-    -- Unused Code
-    constant TBD3         : std_logic_vector(4 downto 0) := "11110";
-    -- Unused Code 
-    constant TBD4         : std_logic_vector(4 downto 0) := "11111";
+    -- Set branch taken if A is less than or equal to B
+    constant BLEB         : std_logic_vector(4 downto 0) := "11100";
+    -- Set branch taken if A is less than or equal to 0
+    constant BLEZ         : std_logic_vector(4 downto 0) := "11101";
+    -- Set branch taken if A is greater than B
+    constant BGTB         : std_logic_vector(4 downto 0) := "11110";
+    -- Set branch taken if A is greater than 0
+    constant BGZ         : std_logic_vector(4 downto 0) := "11111";
 
 
     signal SIG_Result_Low, SIG_Result_High : std_logic_vector(31 downto 0) := (others => '0');
-    signal SIG_Mult_Result                 : std_logic_vector(63 downto 0) := (others => '0');
     signal SIG_Branch : std_logic := '0'; 
-
-begin
-    -- always assign outputs to signal values
-    Result_Low   <= SIG_Result_Low;
-    Result_High  <= SIG_Result_High;
-    Branch_Taken <= SIG_branch;
     
-    -- process statement to run when any inputs change
+    begin
+        -- always assign outputs to signal values
+        Result_Low   <= SIG_Result_Low;
+        Result_High  <= SIG_Result_High;
+        Branch_Taken <= SIG_branch;
+        
+        -- process statement to run when any inputs change
     process (A, B, Shift_Amount, OP_Select)
+    variable VAR_Mult_Result                 : std_logic_vector(63 downto 0) := (others => '0');
     begin
         -- Reset all signal values, only overwrite if needed 
         SIG_Result_Low  <= (others => '0');
@@ -155,83 +155,35 @@ begin
 
             when LSRA         =>
                 -- STATUS : UNTESTED
-                SIG_Result_Low <= A;
-                for i in 1 to Shift_Amount loop
-                    for j in 31 downto 1 loop
-                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(31) <= '0';
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(unsigned(A), to_integer(unsigned(Shift_Amount))));
 
             when LSLA         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= A;
-                for i in 1 to Shift_Amount loop
-                    for j in 0 to 30 loop
-                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(0) <= '0';
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(unsigned(A), to_integer(unsigned(Shift_Amount))));
 
             when LSRB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= B;
-                for i in 1 to Shift_Amount loop
-                    for j in 31 downto 1 loop
-                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(31) <= '0';
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(unsigned(B), to_integer(unsigned(Shift_Amount))));
 
             when LSLB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= B;
-                for i in 1 to Shift_Amount loop
-                    for j in 0 to 30 loop
-                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(0) <= '0';
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(unsigned(B), to_integer(unsigned(Shift_Amount))));
 
             when ASLA         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= A;
-                for i in 1 to Shift_Amount loop
-                    for j in 0 to 30 loop
-                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(0) <= '0';
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(signed(A), to_integer(unsigned(Shift_Amount))));
 
             when ASRA         =>
                 -- STATUS : UNTESTED
-                SIG_Result_Low <= A;
-                for i in 1 to Shift_Amount loop
-                    for j in 31 downto 1 loop
-                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(31) <= SIG_Result_Low(30);
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(signed(A), to_integer(unsigned(Shift_Amount))));
 
             when ASLB         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= B;
-                for i in 1 to Shift_Amount loop
-                    for j in 0 to 30 loop
-                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(0) <= '0';
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(signed(B), to_integer(unsigned(Shift_Amount))));
 
             when ASRB         =>
                 -- STATUS : UNTESTED
-                SIG_Result_Low <= B;
-                for i in 1 to Shift_Amount loop
-                    for j in 31 downto 1 loop
-                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
-                    end loop;
-                    SIG_Result_Low(31) <= SIG_Result_Low(30);
-                end loop;
+                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(signed(B), to_integer(unsigned(Shift_Amount))));
 
             when ALTB         =>
                 -- STATUS: UNTESTED
@@ -275,15 +227,15 @@ begin
 
             when MultUnsigned =>
                 -- STATUS: UNTESTED
-                SIG_Mult_Result <= std_logic_vector(unsigned(A) * unsigned(B));
-                SIG_Result_High <= SIG_Mult_Result(63 downto 32);
-                SIG_Result_Low  <= SIG_Mult_Result(31 downto 0);
+                VAR_Mult_Result := std_logic_vector(unsigned(A) * unsigned(B));
+                SIG_Result_High <= VAR_Mult_Result(63 downto 32);
+                SIG_Result_Low  <= VAR_Mult_Result(31 downto 0);
 
             when MultSigned   =>
                 -- STATUS: UNTESTED
-                SIG_Mult_Result <= std_logic_vector(unsigned(A) * unsigned(B));
-                SIG_Result_High <= SIG_Mult_Result(63 downto 32);
-                SIG_Result_Low  <= SIG_Mult_Result(31 downto 0);
+                VAR_Mult_Result := std_logic_vector(signed(A) * signed(B));
+                SIG_Result_High <= VAR_Mult_Result(63 downto 32);
+                SIG_Result_Low  <= VAR_Mult_Result(31 downto 0);
 
             when AANDB        =>
                 -- STATUS: UNTESTED
@@ -305,6 +257,38 @@ begin
                 -- STATUS: UNTESTED
                 SIG_Result_Low <= A xnor B;
 
+            when BLEB =>
+                -- STATUS: UNTESTED
+                if A < B or A = B then 
+                    SIG_Branch <= '1';
+                else 
+                    SIG_Branch <= '0';
+                end if;
+
+            when BLEZ =>
+                -- STATUS: UNTESTED
+                if unsigned(A) < 0 or unsigned(A) = 0 then 
+                    SIG_Branch <= '1';
+                else 
+                    SIG_Branch <= '0';
+                end if;
+
+            when BGTB =>
+                -- STATUS: UNTESTED
+                if A > B then 
+                    SIG_Branch <= '1';
+                else 
+                    SIG_Branch <= '0';
+                end if;
+
+            when BGZ =>
+                -- STATUS: UNTESTED
+                if unsigned(A) > 0 then
+                    SIG_Branch <= '1';
+                else 
+                    SIG_Branch <= '0';
+                end if;
+            
             when others       =>
                 -- STATUS: UNTESTED
                 SIG_Result_Low <= (others => '0');

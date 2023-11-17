@@ -27,7 +27,7 @@ code value, operation, description
 11001,AXORB,Bitwise XOR operation of A and B
 11010,ANORB,Bitwise NOR operation of A and B
 11011,AXNORB,Bitwise XNOR operation of A and B
-11100,TBD1,Unused OP Code
-11101,TBD2,Unused OP Code
-11110,TBD3,Unused OP Code
-11111,TBD4,Unused OP Code
+11100,BLEB,Set branch taken if A is less than or equal to B
+11101,BLEZ,Set branch taken if A is less than or equal to 0
+11110,BGTB,Set branch taken if A is greater than B
+11111,BGZ,Set branch taken if A is greater than 0

@@ -1,60 +1,309 @@
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 1 errors.
-# 2 compiles, 2 failed with 15 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 3 errors.
-# 2 compiles, 2 failed with 17 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 3 errors.
-# 2 compiles, 2 failed with 17 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 5 errors.
-# 2 compiles, 2 failed with 19 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 5 errors.
-# 2 compiles, 2 failed with 19 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 2 errors.
-# 2 compiles, 2 failed with 16 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
-# Compile of ALU_Main_TB.vhd failed with 1 errors.
-# 2 compiles, 2 failed with 15 errors.
-# Compile of ALU_Main.vhd failed with 28 errors.
-# Compile of ALU_Main_TB.vhd failed with 1 errors.
-# 2 compiles, 2 failed with 29 errors.
-# Compile of ALU_Main.vhd failed with 1 errors.
-# Compile of ALU_Main_TB.vhd failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of ALU_Main.vhd failed with 14 errors.
+# Compile of ALU_Main.vhd failed with 24 errors.
 # Compile of ALU_Main_TB.vhd was successful.
-# 2 compiles, 1 failed with 14 errors.
-# Compile of ALU_Main.vhd failed with 9 errors.
-# Compile of ALU_Main_TB.vhd was successful.
-# 2 compiles, 1 failed with 9 errors.
-# Compile of ALU_Main.vhd failed with 3 errors.
-# Compile of ALU_Main_TB.vhd was successful.
-# 2 compiles, 1 failed with 3 errors.
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 107 errors.
+# 3 compiles, 2 failed with 131 errors.
 # Compile of ALU_Main.vhd was successful.
 # Compile of ALU_Main_TB.vhd was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.alu_main_tb
-# vsim -gui work.alu_main_tb 
-# Start time: 23:07:33 on Nov 15,2023
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 107 errors.
+# 3 compiles, 1 failed with 107 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 107 errors.
+# 3 compiles, 1 failed with 107 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 13 errors.
+# 3 compiles, 1 failed with 13 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 14 errors.
+# 3 compiles, 1 failed with 14 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 13 errors.
+# 3 compiles, 1 failed with 13 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd failed with 12 errors.
+# 3 compiles, 1 failed with 12 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_deliverable_tb
+# vsim -gui work.alu_main_deliverable_tb 
+# Start time: 16:42:00 on Nov 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
-# Loading work.alu_main_tb(logic)
+# Loading work.alu_main_deliverable_tb(tb)
 # Loading work.alu_main(logic)
-add wave -position end  sim:/alu_main_tb/branchTaken
-add wave -position end  sim:/alu_main_tb/input1
-add wave -position end  sim:/alu_main_tb/input2
-add wave -position end  sim:/alu_main_tb/opSelect
-add wave -position end  sim:/alu_main_tb/resultHigh
-add wave -position end  sim:/alu_main_tb/resultLow
-add wave -position end  sim:/alu_main_tb/shiftAmount
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 2 descending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 2 descending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 2 descending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 2 descending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position end  sim:/alu_main_deliverable_tb/A
+add wave -position end  sim:/alu_main_deliverable_tb/B
+add wave -position end  sim:/alu_main_deliverable_tb/Branch_Taken
+add wave -position end  sim:/alu_main_deliverable_tb/OP_Select
+add wave -position end  sim:/alu_main_deliverable_tb/Result_High
+add wave -position end  sim:/alu_main_deliverable_tb/Result_Low
+add wave -position end  sim:/alu_main_deliverable_tb/Shift_Amount
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlft75v2di".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft75v2di
 run -all
+# ** Warning: Error: ADD Result_Low Wrong
+#    Time: 20 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: SUB Result_Low Wrong
+#    Time: 40 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: MULT (signed) Result_Low Wrong
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (signed)
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: MULT (unsigned) Result_Low Wrong
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (unsigned)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: AND Result_Low Wrong
+#    Time: 100 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right logical Result_Low Wrong
+#    Time: 120 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right arithmetic Result_Low Wrong
+#    Time: 140 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right arithmetic Result_Low Wrong
+#    Time: 160 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: set on less than Result_Low Wrong
+#    Time: 180 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: set on less than Result_Low Wrong
+#    Time: 200 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: branch if less than or equal to 0 Result_Low Wrong
+#    Time: 220 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Branch Taken wrong in branch if greather than 0
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
 # Break key hit
-# Simulation stop requested.
+run -all
+quit -sim
+# End time: 17:00:30 on Nov 17,2023, Elapsed time: 0:18:30
+# Errors: 0, Warnings: 26
+# Compile of ALU_Main.vhd failed with 6 errors.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 1 failed with 6 errors.
+# Compile of ALU_Main.vhd failed with 3 errors.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of ALU_Main.vhd failed with 7 errors.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 1 failed with 7 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_deliverable_tb
+# vsim -gui work.alu_main_deliverable_tb 
+# Start time: 17:14:22 on Nov 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_main_deliverable_tb(tb)
+# Loading work.alu_main(logic)
+add wave -position end  sim:/alu_main_deliverable_tb/A
+add wave -position end  sim:/alu_main_deliverable_tb/B
+add wave -position end  sim:/alu_main_deliverable_tb/Branch_Taken
+add wave -position end  sim:/alu_main_deliverable_tb/OP_Select
+add wave -position end  sim:/alu_main_deliverable_tb/Result_High
+add wave -position end  sim:/alu_main_deliverable_tb/Result_Low
+add wave -position end  sim:/alu_main_deliverable_tb/Shift_Amount
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlftay3bmj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftay3bmj
+run -all
+# ** Warning: Error: MULT (signed) Result_Low Wrong
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (signed)
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: MULT (unsigned) Result_Low Wrong
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (unsigned)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right logical Result_Low Wrong
+#    Time: 120 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right arithmetic Result_Low Wrong
+#    Time: 140 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right arithmetic Result_Low Wrong
+#    Time: 160 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: Error: MULT (signed) Result_Low Wrong
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (signed)
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: MULT (unsigned) Result_Low Wrong
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (unsigned)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right logical Result_Low Wrong
+#    Time: 120 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right arithmetic Result_Low Wrong
+#    Time: 140 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: right arithmetic Result_Low Wrong
+#    Time: 160 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# Break key hit
+# Break key hit
+quit -sim
+# End time: 17:22:27 on Nov 17,2023, Elapsed time: 0:08:05
+# Errors: 0, Warnings: 9
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_deliverable_tb
+# vsim -gui work.alu_main_deliverable_tb 
+# Start time: 17:22:39 on Nov 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_main_deliverable_tb(tb)
+# Loading work.alu_main(logic)
+add wave -position end  sim:/alu_main_deliverable_tb/A
+add wave -position end  sim:/alu_main_deliverable_tb/B
+add wave -position end  sim:/alu_main_deliverable_tb/Branch_Taken
+add wave -position end  sim:/alu_main_deliverable_tb/OP_Select
+add wave -position end  sim:/alu_main_deliverable_tb/Result_High
+add wave -position end  sim:/alu_main_deliverable_tb/Result_Low
+add wave -position end  sim:/alu_main_deliverable_tb/Shift_Amount
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlft6w51fj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6w51fj
+run -all
+# ** Warning: Error: MULT (signed) Result_Low Wrong
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (signed)
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: MULT (unsigned) Result_Low Wrong
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (unsigned)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# Break key hit
+quit -sim
+# End time: 17:24:50 on Nov 17,2023, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 8
+# Compile of ALU_Main.vhd failed with 2 errors.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_deliverable_tb
+# vsim -gui work.alu_main_deliverable_tb 
+# Start time: 17:26:51 on Nov 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_main_deliverable_tb(tb)
+# Loading work.alu_main(logic)
+add wave -position end  sim:/alu_main_deliverable_tb/A
+add wave -position end  sim:/alu_main_deliverable_tb/B
+add wave -position end  sim:/alu_main_deliverable_tb/Branch_Taken
+add wave -position end  sim:/alu_main_deliverable_tb/OP_Select
+add wave -position end  sim:/alu_main_deliverable_tb/Result_High
+add wave -position end  sim:/alu_main_deliverable_tb/Result_Low
+add wave -position end  sim:/alu_main_deliverable_tb/Shift_Amount
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlftsfv7ki".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsfv7ki
+run -all
+# ** Warning: Error: MULT (signed) Result_Low Wrong
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (signed)
+#    Time: 60 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: MULT (unsigned) Result_Low Wrong
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Warning: Error: Result_High Wrong in MULT (unsigned)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+quit -sim
+# End time: 17:29:53 on Nov 17,2023, Elapsed time: 0:03:02
+# Errors: 0, Warnings: 9
+# Compile of ALU_Main.vhd failed with 1 errors.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_TB.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_deliverable_tb
+# vsim -gui work.alu_main_deliverable_tb 
+# Start time: 17:30:33 on Nov 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_main_deliverable_tb(tb)
+# Loading work.alu_main(logic)
+add wave -position end  sim:/alu_main_deliverable_tb/A
+add wave -position end  sim:/alu_main_deliverable_tb/B
+add wave -position end  sim:/alu_main_deliverable_tb/Branch_Taken
+add wave -position end  sim:/alu_main_deliverable_tb/OP_Select
+add wave -position end  sim:/alu_main_deliverable_tb/Result_High
+add wave -position end  sim:/alu_main_deliverable_tb/Result_Low
+add wave -position end  sim:/alu_main_deliverable_tb/Shift_Amount
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlft6tsmyb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6tsmyb
+run -all
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+quit -sim
+# End time: 17:32:20 on Nov 17,2023, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 5
