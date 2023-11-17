@@ -37,3 +37,24 @@
 # Compile of ALU_Main.vhd was successful.
 # Compile of ALU_Main_TB.vhd was successful.
 # 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_tb
+# vsim -gui work.alu_main_tb 
+# Start time: 23:07:33 on Nov 15,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_main_tb(logic)
+# Loading work.alu_main(logic)
+add wave -position end  sim:/alu_main_tb/branchTaken
+add wave -position end  sim:/alu_main_tb/input1
+add wave -position end  sim:/alu_main_tb/input2
+add wave -position end  sim:/alu_main_tb/opSelect
+add wave -position end  sim:/alu_main_tb/resultHigh
+add wave -position end  sim:/alu_main_tb/resultLow
+add wave -position end  sim:/alu_main_tb/shiftAmount
+run -all
+# Break key hit
+# Simulation stop requested.

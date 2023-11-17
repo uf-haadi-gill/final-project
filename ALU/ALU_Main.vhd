@@ -130,15 +130,15 @@ begin
 
         case (OP_Select) is
             when OutputA      =>
-                -- STATUS: UNTESTED
+                -- STATUS: FUNCTIONAL
                 SIG_Result_Low <= A;
 
             when OutputB      =>
-                -- STATUS: UNTESTED
+                -- STATUS: FUNCTIONAL
                 SIG_Result_Low <= B;
 
             when AddUnsigned  =>
-                -- STATUS: UNTESTED
+                -- STATUS: FUNCTIONAL
                 SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when AddSigned    =>
@@ -146,36 +146,92 @@ begin
                 SIG_Result_Low <= std_logic_vector(signed(A) + signed(B));
 
             when SubtractAB   =>
-                -- STATUS : UNTESTED
+                -- STATUS : FUNCTIONAL
                 SIG_Result_Low <= std_logic_vector(unsigned(A) - unsigned(B));
 
             when SubtractBA   =>
                 -- STATUS : UNTESTED
                 SIG_Result_Low <= std_logic_vector(unsigned(B) - unsigned(A));
 
-            when LSLA         =>
-                -- STATUS : UNFINISHED
-
             when LSRA         =>
-                -- STATUS: UNFINISHED
+                -- STATUS : UNTESTED
+                SIG_Result_Low <= A;
+                for i in 1 to Shift_Amount loop
+                    for j in 31 downto 1 loop
+                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(31) <= '0';
+                end loop;
 
-            when LSLB         =>
-                -- STATUS: UNFINISHED
+            when LSLA         =>
+                -- STATUS: UNTESTED
+                SIG_Result_Low <= A;
+                for i in 1 to Shift_Amount loop
+                    for j in 0 to 30 loop
+                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(0) <= '0';
+                end loop;
 
             when LSRB         =>
-                -- STATUS: UNFINISHED
+                -- STATUS: UNTESTED
+                SIG_Result_Low <= B;
+                for i in 1 to Shift_Amount loop
+                    for j in 31 downto 1 loop
+                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(31) <= '0';
+                end loop;
+
+            when LSLB         =>
+                -- STATUS: UNTESTED
+                SIG_Result_Low <= B;
+                for i in 1 to Shift_Amount loop
+                    for j in 0 to 30 loop
+                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(0) <= '0';
+                end loop;
 
             when ASLA         =>
-                -- STATUS: UNFINISHED
+                -- STATUS: UNTESTED
+                SIG_Result_Low <= A;
+                for i in 1 to Shift_Amount loop
+                    for j in 0 to 30 loop
+                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(0) <= '0';
+                end loop;
 
             when ASRA         =>
-                -- STATUS: UNFINISHED
+                -- STATUS : UNTESTED
+                SIG_Result_Low <= A;
+                for i in 1 to Shift_Amount loop
+                    for j in 31 downto 1 loop
+                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(31) <= SIG_Result_Low(30);
+                end loop;
 
             when ASLB         =>
-                -- STATUS: UNFINISHED
+                -- STATUS: UNTESTED
+                SIG_Result_Low <= B;
+                for i in 1 to Shift_Amount loop
+                    for j in 0 to 30 loop
+                        SIG_Result_Low(i+1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(0) <= '0';
+                end loop;
 
             when ASRB         =>
-                -- STATUS: UNFINISHED
+                -- STATUS : UNTESTED
+                SIG_Result_Low <= B;
+                for i in 1 to Shift_Amount loop
+                    for j in 31 downto 1 loop
+                        SIG_Result_Low(i-1) <= SIG_Result_Low(i);
+                    end loop;
+                    SIG_Result_Low(31) <= SIG_Result_Low(30);
+                end loop;
 
             when ALTB         =>
                 -- STATUS: UNTESTED
