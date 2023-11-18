@@ -10,25 +10,25 @@ z2
 cModel Technology
 dC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/Labs/Lab6/modsim
 Ememory
-Z0 w1700282641
+Z0 w1700285264
 Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 195
+!i122 203
 Z6 dC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/modelSim-Project
 Z7 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
 Z8 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
 l0
-L6 1
-VmGg9KSF:jILg7]1?m4<>`2
-!s100 1HST5=<?ZU_I3<n1O>^<>1
+L18 1
+V2A?DM5P8O?e6eifENE7CF1
+!s100 @AoBjY0NY84=?l[]<kTzN2
 Z9 OV;C;2020.1;71
 32
-Z10 !s110 1700282756
+Z10 !s110 1700285300
 !i10b 1
-Z11 !s108 1700282755.000000
+Z11 !s108 1700285299.000000
 Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd|
 Z13 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd|
 !i113 1
@@ -43,12 +43,12 @@ R2
 R3
 R4
 R5
-Z19 DEx4 work 6 memory 0 22 mGg9KSF:jILg7]1?m4<>`2
-!i122 195
-l23
-L14 88
-VlkA:La?;1`73[^nacR`IK1
-!s100 fBVO3Xk4G50:[hCjh53JO3
+Z19 DEx4 work 6 memory 0 22 2A?DM5P8O?e6eifENE7CF1
+!i122 203
+l35
+L26 88
+VROK36:Tj8G<BcYZ@?a4J^2
+!s100 =LhhzdBhKUz9eeLjRTN^R1
 R9
 32
 R10
@@ -64,7 +64,7 @@ Z20 w1700282745
 R3
 R4
 R5
-!i122 196
+!i122 204
 R6
 Z21 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory_TB.vhd
 Z22 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory_TB.vhd
@@ -76,7 +76,7 @@ R9
 32
 R10
 !i10b 1
-Z23 !s108 1700282756.000000
+Z23 !s108 1700285300.000000
 Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory_TB.vhd|
 Z25 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory_TB.vhd|
 !i113 1
@@ -90,7 +90,7 @@ R3
 R4
 R5
 DEx4 work 9 memory_tb 0 22 :2Jl;0YST=>5NYL1iVXh12
-!i122 196
+!i122 204
 l22
 L8 144
 V5^Flih]gg0MeTGO0OEz6J2
@@ -106,11 +106,11 @@ R25
 R14
 R15
 Eram
-Z26 w1700263058
+Z26 w1700283847
 R17
 R4
 R5
-!i122 197
+!i122 205
 R6
 Z27 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd
 Z28 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd
@@ -133,11 +133,11 @@ R17
 R4
 R5
 R18
-!i122 197
+!i122 205
 l59
 L55 35
-VfAV9DB_b[]Ud`CFlf@jQR1
-!s100 hdPWc4WGm0b2h]Th7=dn[1
+V=]h_k:XICMdnh2O;_][fI1
+!s100 RIi;HUn9<iK172?>P1QD83
 R9
 32
 R10
@@ -152,7 +152,7 @@ Ereg
 Z31 w1700264994
 R4
 R5
-!i122 198
+!i122 206
 R6
 Z32 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register/reg.vhd
 Z33 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register/reg.vhd
@@ -174,7 +174,7 @@ Alogic
 R4
 R5
 R16
-!i122 198
+!i122 206
 l17
 Z36 L16 11
 Z37 Vo<WG^4`_V]G=hm5;RTbjA1

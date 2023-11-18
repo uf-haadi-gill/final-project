@@ -850,3 +850,97 @@ run -all
 #    Time: 260 ns  Iteration: 0  Instance: /memory_tb
 # ** Note: DONE!!!!!!
 #    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+# End time: 00:32:51 on Nov 18,2023, Elapsed time: 1:13:27
+# Errors: 0, Warnings: 3

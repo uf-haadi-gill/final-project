@@ -1,3 +1,15 @@
+----------------------------------------------------------------------------------------------------------------
+--
+--      IMPORTANT INFORMATION
+--      > Reading from RAM takes 1 extra clock cycle (1 edge to read, result displayed by next falling edge)
+--      > Data to OutPort will be sent on next rising edge after being set (registered output)
+--
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -60,7 +72,7 @@ begin
         output => OutPort
     );
 
-    process( baddr, dataIn, InPort0_in, InPort1_in, memRead, memWrite, InPort0_en, InPort1_en, clk, rst)
+    process( baddr, dataIn, InPort0_in, InPort1_in, memRead, memWrite, InPort0_en, InPort1_en, rst)
     begin 
         if (rst = '1') then
             SIG_data_out <= (others => '0');
