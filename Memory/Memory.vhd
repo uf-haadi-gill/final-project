@@ -72,7 +72,10 @@ begin
         output => OutPort
     );
 
-    process( baddr, dataIn, InPort0_in, InPort1_in, memRead, memWrite, InPort0_en, InPort1_en, rst)
+    --SIG_ram_en <= '1' when ((memWrite = '1') and (not baddr = x"0000FFF8") and (not baddr = x"0000FFFC")) else
+    --             '0';
+
+    process( baddr, dataIn, memRead, memWrite, rst)
     begin 
         if (rst = '1') then
             SIG_data_out <= (others => '0');
@@ -102,12 +105,12 @@ begin
                 --          Line below might cause delay....
                 -- 
                 --------------------------------------------------------
-                SIG_ram_en <=  memWrite;
                 SIG_data_out <= SIG_ram_out;
+                SIG_ram_en <= memWrite;
             end if;
         end if;
     end process;
-            
     dataOut <= SIG_data_out;
+            
 
 end logic;
