@@ -6,7 +6,7 @@ entity concat is
     port(
         input_lower : in std_logic_vector(27 downto 0);
         input_upper : in std_logic_vector(3 downto 0);
-        output     : out std_logic_vector(31 downto 0);
+        output     : out std_logic_vector(31 downto 0)
     );
 end concat;
 

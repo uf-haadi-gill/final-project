@@ -11,7 +11,7 @@ entity instruction_register is
         out25_to_21 : out std_logic_vector(4 downto 0);
         out20_to_16 : out std_logic_vector(4 downto 0);
         out15_to_11 : out std_logic_vector(4 downto 0);
-        out15_to_0  : out std_logic_vector(15 downto 0);
+        out15_to_0  : out std_logic_vector(15 downto 0)
     );
 end instruction_register;
 
@@ -35,4 +35,5 @@ begin
             out15_to_11  <= input(15 downto 11);
             out15_to_0   <= input(15 downto 0);
         end if;
+    end process;
 end logic;

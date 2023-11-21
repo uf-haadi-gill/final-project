@@ -4,8 +4,8 @@ use ieee.numeric_std.all;
 
 entity shift_left_2 is
     generic(
-        WIDTH : positive := 32;
-    )
+        WIDTH : positive := 32
+    );
     port(
         input : in std_logic_vector(WIDTH-1 downto 0);
         output : out std_logic_vector(WIDTH-1 downto 0)

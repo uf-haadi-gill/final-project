@@ -2,9 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity mux4to1 is 
+entity mux3to1 is 
     generic(
-        WIDTH : positive := 32;
+        WIDTH : positive := 32
     );
     port(
         input1 : in std_logic_vector(WIDTH-1 downto 0);
@@ -13,10 +13,10 @@ entity mux4to1 is
         sel    : in std_logic_vector(1 downto 0);
         output : out std_logic_vector(WIDTH-1 downto 0)
     );
-end mux4to1;
+end mux3to1;
 
 
-architecture logic of mux4to1 is
+architecture logic of mux3to1 is
 begin
     output <= input1 when sel = "00" else 
               input2 when sel = "01" else

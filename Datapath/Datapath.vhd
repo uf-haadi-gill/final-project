@@ -8,7 +8,7 @@ entity datapath is
         button0          : in std_logic;
         button1          : in std_logic;
         switches         : in std_logic_vector(9 downto 0);
-        LEDs             : out std_logic_vector(9 downto 0);
+        LEDs             : out std_logic_vector(31 downto 0);
 
         -- Controller Interface
         PCWriteCond      : in  std_logic;
@@ -26,10 +26,10 @@ entity datapath is
         ALUSrcB          : in  std_logic_vector(1 downto 0);
         RegWrite         : in  std_logic;
         RegDst           : in  std_logic;
-        ControllerOpCode : out std_logic_vector(5 downto 0),
+        ControllerOpCode : out std_logic_vector(5 downto 0);
 
         -- ALU Outs
-        BranchTaken      : out std_logic;
+        BranchTaken      : buffer std_logic;
         --PC_Mux : out std_logic_vector(31 downto 0);
 
         -- General Inputs
@@ -55,13 +55,13 @@ architecture logic of datapath is
     signal IR_31_to_26           : std_logic_vector(5  downto 0) := (others => '0');
     signal IR_25_to_0            : std_logic_vector(25 downto 0) := (others => '0');
     signal IRMux1_to_RFReg       : std_logic_vector(4  downto 0) := (others => '0');
-    signal IRMux2_to_RFData      : std_logic_vector(4  downto 0) := (others => '0');
+    signal IRMux2_to_RFData      : std_logic_vector(31 downto 0) := (others => '0');
     signal Data1_to_RegA         : std_logic_vector(31 downto 0) := (others => '0');
     signal Data2_to_RegB         : std_logic_vector(31 downto 0) := (others => '0');
     signal SignEx_to_ShiftLeft   : std_logic_vector(31 downto 0) := (others => '0');
     signal ShiftLeft_to_BMux     : std_logic_vector(31 downto 0) := (others => '0');
     signal RegB_to_BMux          : std_logic_vector(31 downto 0) := (others => '0');
-    signal 4_to_BMux             : std_logic_vector(31 downto 0) := x"00000004";
+    signal four_to_BMux             : std_logic_vector(31 downto 0) := x"00000004";
     signal BMux_to_ALUMain       : std_logic_vector(31 downto 0) := (others => '0');
     signal RegA_to_AMux          : std_logic_vector(31 downto 0) := (others => '0');
     signal AMux_to_ALUMain       : std_logic_vector(31 downto 0) := (others => '0');
@@ -79,6 +79,7 @@ architecture logic of datapath is
     signal RegHigh_en : std_logic := '0';
     signal ALU_Low_High : std_logic_vector(1 downto 0) := (others => '0');
 
+    
 
 begin
     ---------------------------------------------------------------------
@@ -88,7 +89,7 @@ begin
     ---------------------------------------------------------------------
     PCReg : entity work.reg
     port map(
-        input  => PCMux_to_PCReg;
+        input  => PCMux_to_PCReg,
         clk    => clk, 
         rst    => rst, 
         enable => PCWrite or (BranchTaken and PCWriteCond),
@@ -167,7 +168,7 @@ begin
 
     RegDstMux : entity work.mux2to1
     generic map(
-        WIDTH := 5
+        WIDTH => 5
     )
     port map(
         input1 => IR_20_to_16,
@@ -178,7 +179,7 @@ begin
 
     MemtoRegMux : entity work.mux2to1
     port map(
-      input1 => MemDataReg,
+      input1 => MemReg_to_DataMux,
       input2 => ALUMux_to_DataMux,
       sel    => MemToReg,
       output => IRMux2_to_RFData  
@@ -198,7 +199,7 @@ begin
     port map(
         input1 => ResultLow_to_RegLow,
         input2 => ALUOut_to_CodeMux,
-        input3 => Concat_to_PCMux
+        input3 => Concat_to_PCMux,
         sel    => PCSource,
         output => PCMux_to_PCReg
     );
@@ -217,7 +218,7 @@ begin
     RegBMux : entity work.mux4to1
     port map(
         input1 => RegB_to_BMux,
-        input2 => 4_to_BMux,
+        input2 => four_to_BMux,
         input3 => SignEx_to_ShiftLeft,
         input4 => ShiftLeft_to_BMux,
         sel    => ALUSrcB,
@@ -248,8 +249,11 @@ begin
     );
 
     ShiftLeftPCMux : entity work.shift_left_2
+    generic map(
+        WIDTH => 28
+    )
     port map(
-        input  => IR_25_to_0,
+        input  => "00" & IR_25_to_0,
         output => ShiftLeft2_to_Concat
     );
 
@@ -270,8 +274,8 @@ begin
     port map(
         baddr      => CodeMux_to_Memory,
         dataIn     => RegB_to_BMux,
-        InPort0_in => switches,
-        InPort1_in => switches,
+        InPort0_in => ZeroEx_to_Memory,
+        InPort1_in => ZeroEx_to_Memory,
         memRead    => MemRead,
         memWrite   => MemWrite,
         InPort0_en => not button0,
@@ -282,10 +286,11 @@ begin
         OutPort    => LEDs
     );
 
-    InstReg : entity work.Instruction_register
+InstReg : entity work.Instruction_register
     port map(
         clk         => clk, 
         rst         => rst, 
+        input       => Memory_to_Reg,
         out25_to_0  => IR_25_to_0, 
         out31_to_26 => IR_31_to_26,
         out25_to_21 => IR_25_to_21,
@@ -300,11 +305,11 @@ begin
         rst         => rst,
         rd_addr0    => IR_25_to_21,
         rd_addr1    => IR_20_to_16,
-        wr_addr     => IRMux1_to_RFReg
+        wr_addr     => IRMux1_to_RFReg,
         wr_en       => RegWrite,
         wr_data     => IRMux2_to_RFData,
         JumpAndLink => JumpAndLink,
-        PC_4        => ___________,
+        PC_4        => ALUOut_to_CodeMux,
         rd_data0    => Data1_to_RegA,
         rd_data1    => Data2_to_RegB
     );
@@ -315,7 +320,7 @@ begin
         LO_en     => RegLow_en,
         ALU_LO_HI => ALU_Low_High,
         IR_5to0   => IR_15_to_0(5 downto 0),
-        IR31to26  => IR_31_to_26,
+        IR_31to26  => IR_31_to_26,
         ALU_OP    => ALUOp,
         OPSelect  => ALUCtrl_to_ALUMain
     );
@@ -325,7 +330,7 @@ begin
         A => AMux_to_ALUMain,
         B => BMux_to_ALUMain,
         Shift_Amount => IR_15_to_0(10 downto 6), 
-        OP_Select => ALUOp,
+        OP_Select => ALUCtrl_to_ALUMain,
         Result_Low => ResultLow_to_RegLow, 
         Result_High => ResultHigh_to_RegHigh,
         Branch_Taken => BranchTaken

@@ -1,0 +1,1277 @@
+Analysis & Synthesis report for Final_Project
+Mon Nov 20 23:05:53 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Memory:Mem|RAM:Storage|altsyncram:altsyncram_component|altsyncram_d4o3:auto_generated
+ 16. Parameter Settings for User Entity Instance: reg:PCReg
+ 17. Parameter Settings for User Entity Instance: reg:MemDataReg
+ 18. Parameter Settings for User Entity Instance: reg:RegA
+ 19. Parameter Settings for User Entity Instance: reg:RegB
+ 20. Parameter Settings for User Entity Instance: reg:ALUOut
+ 21. Parameter Settings for User Entity Instance: reg:RegLow
+ 22. Parameter Settings for User Entity Instance: reg:RegHigh
+ 23. Parameter Settings for User Entity Instance: mux2to1:CodeMux
+ 24. Parameter Settings for User Entity Instance: mux2to1:RegDstMux
+ 25. Parameter Settings for User Entity Instance: mux2to1:MemtoRegMux
+ 26. Parameter Settings for User Entity Instance: mux2to1:RegAMux
+ 27. Parameter Settings for User Entity Instance: mux3to1:PCSourceMux
+ 28. Parameter Settings for User Entity Instance: mux3to1:ALUMux
+ 29. Parameter Settings for User Entity Instance: mux4to1:RegBMux
+ 30. Parameter Settings for User Entity Instance: shift_left_2:ShiftLeftBMux
+ 31. Parameter Settings for User Entity Instance: shift_left_2:ShiftLeftPCMux
+ 32. Parameter Settings for User Entity Instance: Memory:Mem|RAM:Storage|altsyncram:altsyncram_component
+ 33. Parameter Settings for User Entity Instance: Memory:Mem|reg:InputPort0
+ 34. Parameter Settings for User Entity Instance: Memory:Mem|reg:InputPort1
+ 35. Parameter Settings for User Entity Instance: Memory:Mem|reg:OutputPort
+ 36. altsyncram Parameter Settings by Entity Instance
+ 37. Port Connectivity Checks: "ALU_Control:ALUCtrl"
+ 38. Port Connectivity Checks: "shift_left_2:ShiftLeftPCMux"
+ 39. Port Connectivity Checks: "mux4to1:RegBMux"
+ 40. Port Connectivity Checks: "mux3to1:ALUMux"
+ 41. Port Connectivity Checks: "reg:RegHigh"
+ 42. Port Connectivity Checks: "reg:RegLow"
+ 43. Port Connectivity Checks: "reg:ALUOut"
+ 44. Port Connectivity Checks: "reg:RegB"
+ 45. Port Connectivity Checks: "reg:RegA"
+ 46. Port Connectivity Checks: "reg:MemDataReg"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 20 23:05:52 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; Final_Project                               ;
+; Top-level Entity Name              ; datapath                                    ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 2,047                                       ;
+;     Total combinational functions  ; 1,030                                       ;
+;     Dedicated logic registers      ; 1,185                                       ;
+; Total registers                    ; 1185                                        ;
+; Total pins                         ; 71                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Datapath           ; Final_Project      ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                  ;
++--------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                              ; Library ;
++--------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; ../Register File/register_file.vhd               ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd               ;         ;
+; ../Instruction Register/instruction_register.vhd ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd ;         ;
+; ../Generic Components/zero_extend.vhd            ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd            ;         ;
+; ../Generic Components/sign_extend.vhd            ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd            ;         ;
+; ../Generic Components/shift_left_2.vhd           ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd           ;         ;
+; ../Generic Components/reg.vhd                    ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd                    ;         ;
+; ../Generic Components/mux4to1.vhd                ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd                ;         ;
+; ../Generic Components/mux3to1.vhd                ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd                ;         ;
+; ../Generic Components/mux2to1.vhd                ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd                ;         ;
+; ../Generic Components/concat.vhd                 ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd                 ;         ;
+; ../Datapath/Datapath.vhd                         ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd                         ;         ;
+; ../ALU_Control/ALU_Control.vhd                   ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd                   ;         ;
+; ../ALU/ALU_Main.vhd                              ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd                              ;         ;
+; ../Memory/Memory.vhd                             ; yes             ; User VHDL File               ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd                             ;         ;
+; RAM.vhd                                          ; yes             ; User Wizard-Generated File   ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd                              ;         ;
+; altsyncram.tdf                                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                     ;         ;
+; stratix_ram_block.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                              ;         ;
+; lpm_mux.inc                                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                        ;         ;
+; lpm_decode.inc                                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                     ;         ;
+; aglobal201.inc                                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                     ;         ;
+; a_rdenreg.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                      ;         ;
+; altrom.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                         ;         ;
+; altram.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                         ;         ;
+; altdpram.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                       ;         ;
+; db/altsyncram_d4o3.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/db/altsyncram_d4o3.tdf               ;         ;
++--------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 2,047     ;
+;                                             ;           ;
+; Total combinational functions               ; 1030      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 884       ;
+;     -- 3 input functions                    ; 81        ;
+;     -- <=2 input functions                  ; 65        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1030      ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 1185      ;
+;     -- Dedicated logic registers            ; 1185      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 71        ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 1219      ;
+; Total fan-out                               ; 8995      ;
+; Average fan-out                             ; 3.77      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                       ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                             ; Entity Name          ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |datapath                                    ; 1030 (0)            ; 1185 (0)                  ; 8192        ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |datapath                                                                                       ; datapath             ; work         ;
+;    |Memory:Mem|                              ; 90 (90)             ; 52 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem                                                                            ; Memory               ; work         ;
+;       |RAM:Storage|                          ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem|RAM:Storage                                                                ; RAM                  ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem|RAM:Storage|altsyncram:altsyncram_component                                ; altsyncram           ; work         ;
+;             |altsyncram_d4o3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem|RAM:Storage|altsyncram:altsyncram_component|altsyncram_d4o3:auto_generated ; altsyncram_d4o3      ; work         ;
+;       |reg:InputPort0|                       ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem|reg:InputPort0                                                             ; reg                  ; work         ;
+;       |reg:InputPort1|                       ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem|reg:InputPort1                                                             ; reg                  ; work         ;
+;       |reg:OutputPort|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|Memory:Mem|reg:OutputPort                                                             ; reg                  ; work         ;
+;    |instruction_register:InstReg|            ; 0 (0)               ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|instruction_register:InstReg                                                          ; instruction_register ; work         ;
+;    |mux2to1:CodeMux|                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux2to1:CodeMux                                                                       ; mux2to1              ; work         ;
+;    |mux2to1:MemtoRegMux|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux2to1:MemtoRegMux                                                                   ; mux2to1              ; work         ;
+;    |mux2to1:RegAMux|                         ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux2to1:RegAMux                                                                       ; mux2to1              ; work         ;
+;    |mux2to1:RegDstMux|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux2to1:RegDstMux                                                                     ; mux2to1              ; work         ;
+;    |mux3to1:PCSourceMux|                     ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux3to1:PCSourceMux                                                                   ; mux3to1              ; work         ;
+;    |reg:ALUOut|                              ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|reg:ALUOut                                                                            ; reg                  ; work         ;
+;    |reg:MemDataReg|                          ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|reg:MemDataReg                                                                        ; reg                  ; work         ;
+;    |reg:PCReg|                               ; 1 (1)               ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|reg:PCReg                                                                             ; reg                  ; work         ;
+;    |reg:RegA|                                ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|reg:RegA                                                                              ; reg                  ; work         ;
+;    |reg:RegB|                                ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|reg:RegB                                                                              ; reg                  ; work         ;
+;    |register_file:RegFile|                   ; 860 (860)           ; 1029 (1029)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|register_file:RegFile                                                                 ; register_file        ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                             ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; Memory:Mem|RAM:Storage|altsyncram:altsyncram_component|altsyncram_d4o3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; None ;
++--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                              ;
++--------+--------------+---------+--------------+--------------+----------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                  ; IP Include File ;
++--------+--------------+---------+--------------+--------------+----------------------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |datapath|Memory:Mem|RAM:Storage ; RAM.vhd         ;
++--------+--------------+---------+--------------+--------------+----------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; Memory:Mem|SIG_data_out[14]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[20]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[19]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[18]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[17]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[16]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[15]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[13]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[12]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[11]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[10]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[9]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[8]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[7]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[6]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[5]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[4]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[3]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[2]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[1]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[0]                          ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[25]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[24]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[23]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[22]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[21]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[26]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[27]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[28]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[29]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[30]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Memory:Mem|SIG_data_out[31]                         ; Memory:Mem|SIG_data_out[31] ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                             ;                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++---------------------------------------------+---------------------------------------------------------+
+; Register name                               ; Reason for Removal                                      ;
++---------------------------------------------+---------------------------------------------------------+
+; register_file:RegFile|regs[0][31]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][30]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][29]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][28]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][27]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][26]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][25]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][24]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][23]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][22]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][21]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][20]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][19]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][18]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][17]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][16]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][15]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][14]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][13]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][12]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][11]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][10]           ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][9]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][8]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][7]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][6]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][5]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][4]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][3]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][2]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][1]            ; Stuck at GND due to stuck port data_in                  ;
+; register_file:RegFile|regs[0][0]            ; Stuck at GND due to stuck port data_in                  ;
+; Memory:Mem|reg:InputPort1|output[10..31]    ; Stuck at GND due to stuck port data_in                  ;
+; Memory:Mem|reg:InputPort0|output[10..31]    ; Stuck at GND due to stuck port data_in                  ;
+; reg:RegLow|output[0..31]                    ; Lost fanout                                             ;
+; reg:RegHigh|output[0..31]                   ; Stuck at GND due to stuck port clock_enable             ;
+; instruction_register:InstReg|out15_to_11[4] ; Merged with instruction_register:InstReg|out15_to_0[15] ;
+; instruction_register:InstReg|out25_to_0[15] ; Merged with instruction_register:InstReg|out15_to_0[15] ;
+; reg:MemDataReg|output[15]                   ; Merged with instruction_register:InstReg|out15_to_0[15] ;
+; instruction_register:InstReg|out15_to_11[3] ; Merged with instruction_register:InstReg|out15_to_0[14] ;
+; instruction_register:InstReg|out25_to_0[14] ; Merged with instruction_register:InstReg|out15_to_0[14] ;
+; reg:MemDataReg|output[14]                   ; Merged with instruction_register:InstReg|out15_to_0[14] ;
+; instruction_register:InstReg|out15_to_11[2] ; Merged with instruction_register:InstReg|out15_to_0[13] ;
+; instruction_register:InstReg|out25_to_0[13] ; Merged with instruction_register:InstReg|out15_to_0[13] ;
+; reg:MemDataReg|output[13]                   ; Merged with instruction_register:InstReg|out15_to_0[13] ;
+; instruction_register:InstReg|out15_to_11[1] ; Merged with instruction_register:InstReg|out15_to_0[12] ;
+; instruction_register:InstReg|out25_to_0[12] ; Merged with instruction_register:InstReg|out15_to_0[12] ;
+; reg:MemDataReg|output[12]                   ; Merged with instruction_register:InstReg|out15_to_0[12] ;
+; instruction_register:InstReg|out15_to_11[0] ; Merged with instruction_register:InstReg|out15_to_0[11] ;
+; instruction_register:InstReg|out25_to_0[11] ; Merged with instruction_register:InstReg|out15_to_0[11] ;
+; reg:MemDataReg|output[11]                   ; Merged with instruction_register:InstReg|out15_to_0[11] ;
+; instruction_register:InstReg|out25_to_0[10] ; Merged with instruction_register:InstReg|out15_to_0[10] ;
+; reg:MemDataReg|output[10]                   ; Merged with instruction_register:InstReg|out15_to_0[10] ;
+; instruction_register:InstReg|out25_to_0[9]  ; Merged with instruction_register:InstReg|out15_to_0[9]  ;
+; reg:MemDataReg|output[9]                    ; Merged with instruction_register:InstReg|out15_to_0[9]  ;
+; instruction_register:InstReg|out25_to_0[8]  ; Merged with instruction_register:InstReg|out15_to_0[8]  ;
+; reg:MemDataReg|output[8]                    ; Merged with instruction_register:InstReg|out15_to_0[8]  ;
+; instruction_register:InstReg|out25_to_0[7]  ; Merged with instruction_register:InstReg|out15_to_0[7]  ;
+; reg:MemDataReg|output[7]                    ; Merged with instruction_register:InstReg|out15_to_0[7]  ;
+; instruction_register:InstReg|out25_to_0[6]  ; Merged with instruction_register:InstReg|out15_to_0[6]  ;
+; reg:MemDataReg|output[6]                    ; Merged with instruction_register:InstReg|out15_to_0[6]  ;
+; instruction_register:InstReg|out25_to_0[5]  ; Merged with instruction_register:InstReg|out15_to_0[5]  ;
+; reg:MemDataReg|output[5]                    ; Merged with instruction_register:InstReg|out15_to_0[5]  ;
+; instruction_register:InstReg|out25_to_0[4]  ; Merged with instruction_register:InstReg|out15_to_0[4]  ;
+; reg:MemDataReg|output[4]                    ; Merged with instruction_register:InstReg|out15_to_0[4]  ;
+; instruction_register:InstReg|out25_to_0[3]  ; Merged with instruction_register:InstReg|out15_to_0[3]  ;
+; reg:MemDataReg|output[3]                    ; Merged with instruction_register:InstReg|out15_to_0[3]  ;
+; instruction_register:InstReg|out25_to_0[2]  ; Merged with instruction_register:InstReg|out15_to_0[2]  ;
+; reg:MemDataReg|output[2]                    ; Merged with instruction_register:InstReg|out15_to_0[2]  ;
+; instruction_register:InstReg|out25_to_0[1]  ; Merged with instruction_register:InstReg|out15_to_0[1]  ;
+; reg:MemDataReg|output[1]                    ; Merged with instruction_register:InstReg|out15_to_0[1]  ;
+; instruction_register:InstReg|out25_to_0[0]  ; Merged with instruction_register:InstReg|out15_to_0[0]  ;
+; reg:MemDataReg|output[0]                    ; Merged with instruction_register:InstReg|out15_to_0[0]  ;
+; instruction_register:InstReg|out25_to_21[4] ; Merged with instruction_register:InstReg|out25_to_0[25] ;
+; reg:MemDataReg|output[25]                   ; Merged with instruction_register:InstReg|out25_to_0[25] ;
+; instruction_register:InstReg|out25_to_21[3] ; Merged with instruction_register:InstReg|out25_to_0[24] ;
+; reg:MemDataReg|output[24]                   ; Merged with instruction_register:InstReg|out25_to_0[24] ;
+; instruction_register:InstReg|out25_to_21[2] ; Merged with instruction_register:InstReg|out25_to_0[23] ;
+; reg:MemDataReg|output[23]                   ; Merged with instruction_register:InstReg|out25_to_0[23] ;
+; instruction_register:InstReg|out25_to_21[1] ; Merged with instruction_register:InstReg|out25_to_0[22] ;
+; reg:MemDataReg|output[22]                   ; Merged with instruction_register:InstReg|out25_to_0[22] ;
+; instruction_register:InstReg|out25_to_21[0] ; Merged with instruction_register:InstReg|out25_to_0[21] ;
+; reg:MemDataReg|output[21]                   ; Merged with instruction_register:InstReg|out25_to_0[21] ;
+; instruction_register:InstReg|out25_to_0[20] ; Merged with instruction_register:InstReg|out20_to_16[4] ;
+; reg:MemDataReg|output[20]                   ; Merged with instruction_register:InstReg|out20_to_16[4] ;
+; instruction_register:InstReg|out25_to_0[19] ; Merged with instruction_register:InstReg|out20_to_16[3] ;
+; reg:MemDataReg|output[19]                   ; Merged with instruction_register:InstReg|out20_to_16[3] ;
+; instruction_register:InstReg|out25_to_0[18] ; Merged with instruction_register:InstReg|out20_to_16[2] ;
+; reg:MemDataReg|output[18]                   ; Merged with instruction_register:InstReg|out20_to_16[2] ;
+; instruction_register:InstReg|out25_to_0[17] ; Merged with instruction_register:InstReg|out20_to_16[1] ;
+; reg:MemDataReg|output[17]                   ; Merged with instruction_register:InstReg|out20_to_16[1] ;
+; instruction_register:InstReg|out25_to_0[16] ; Merged with instruction_register:InstReg|out20_to_16[0] ;
+; reg:MemDataReg|output[16]                   ; Merged with instruction_register:InstReg|out20_to_16[0] ;
+; reg:ALUOut|output[2..15,17..29]             ; Stuck at GND due to stuck port data_in                  ;
+; reg:PCReg|output[28,29]                     ; Stuck at GND due to stuck port data_in                  ;
+; reg:RegA|output[2]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[2]           ; Lost fanout                                             ;
+; reg:RegA|output[3]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[3]           ; Lost fanout                                             ;
+; reg:RegA|output[4]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[4]           ; Lost fanout                                             ;
+; reg:RegA|output[5]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[5]           ; Lost fanout                                             ;
+; reg:RegA|output[6]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[6]           ; Lost fanout                                             ;
+; reg:RegA|output[7]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[7]           ; Lost fanout                                             ;
+; reg:RegA|output[8]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[8]           ; Lost fanout                                             ;
+; reg:RegA|output[9]                          ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[9]           ; Lost fanout                                             ;
+; reg:RegA|output[10]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[10]          ; Lost fanout                                             ;
+; reg:RegA|output[11]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[11]          ; Lost fanout                                             ;
+; reg:RegA|output[12]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[12]          ; Lost fanout                                             ;
+; reg:RegA|output[13]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[13]          ; Lost fanout                                             ;
+; reg:RegA|output[14]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[14]          ; Lost fanout                                             ;
+; reg:RegA|output[15]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[15]          ; Lost fanout                                             ;
+; reg:RegA|output[17]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[17]          ; Lost fanout                                             ;
+; reg:RegA|output[18]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[18]          ; Lost fanout                                             ;
+; reg:RegA|output[19]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[19]          ; Lost fanout                                             ;
+; reg:RegA|output[20]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[20]          ; Lost fanout                                             ;
+; reg:RegA|output[21]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[21]          ; Lost fanout                                             ;
+; reg:RegA|output[22]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[22]          ; Lost fanout                                             ;
+; reg:RegA|output[23]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[23]          ; Lost fanout                                             ;
+; reg:RegA|output[24]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[24]          ; Lost fanout                                             ;
+; reg:RegA|output[25]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[25]          ; Lost fanout                                             ;
+; reg:RegA|output[26]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[26]          ; Lost fanout                                             ;
+; reg:RegA|output[27]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[27]          ; Lost fanout                                             ;
+; reg:RegA|output[28]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[28]          ; Lost fanout                                             ;
+; reg:RegA|output[29]                         ; Lost fanout                                             ;
+; register_file:RegFile|rd_data0[29]          ; Lost fanout                                             ;
+; Total Number of Removed Registers = 280     ;                                                         ;
++---------------------------------------------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                       ;
++-----------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++-----------------------+---------------------------+-------------------------------------------------------------------------------+
+; reg:ALUOut|output[29] ; Stuck at GND              ; reg:PCReg|output[29], reg:RegA|output[2], register_file:RegFile|rd_data0[2],  ;
+;                       ; due to stuck port data_in ; reg:RegA|output[3], register_file:RegFile|rd_data0[3], reg:RegA|output[4],    ;
+;                       ;                           ; register_file:RegFile|rd_data0[4], reg:RegA|output[5],                        ;
+;                       ;                           ; register_file:RegFile|rd_data0[5], reg:RegA|output[7],                        ;
+;                       ;                           ; register_file:RegFile|rd_data0[7], reg:RegA|output[8],                        ;
+;                       ;                           ; register_file:RegFile|rd_data0[8], reg:RegA|output[9],                        ;
+;                       ;                           ; register_file:RegFile|rd_data0[9], reg:RegA|output[10],                       ;
+;                       ;                           ; register_file:RegFile|rd_data0[10], reg:RegA|output[11],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[11], reg:RegA|output[12],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[12], reg:RegA|output[13],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[13], reg:RegA|output[24],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[24], reg:RegA|output[26],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[26], reg:RegA|output[28],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[28], reg:RegA|output[29],                      ;
+;                       ;                           ; register_file:RegFile|rd_data0[29]                                            ;
+; reg:ALUOut|output[28] ; Stuck at GND              ; reg:PCReg|output[28], reg:RegA|output[23], register_file:RegFile|rd_data0[23] ;
+;                       ; due to stuck port data_in ;                                                                               ;
+; reg:RegA|output[6]    ; Lost Fanouts              ; register_file:RegFile|rd_data0[6]                                             ;
+; reg:RegA|output[14]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[14]                                            ;
+; reg:RegA|output[15]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[15]                                            ;
+; reg:RegA|output[17]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[17]                                            ;
+; reg:RegA|output[18]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[18]                                            ;
+; reg:RegA|output[19]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[19]                                            ;
+; reg:RegA|output[20]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[20]                                            ;
+; reg:RegA|output[21]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[21]                                            ;
+; reg:RegA|output[22]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[22]                                            ;
+; reg:RegA|output[25]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[25]                                            ;
+; reg:RegA|output[27]   ; Lost Fanouts              ; register_file:RegFile|rd_data0[27]                                            ;
++-----------------------+---------------------------+-------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1185  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 1148  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1111  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |datapath|register_file:RegFile|regs[31][13] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |datapath|reg:PCReg|output[0]                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |datapath|reg:PCReg|output[28]               ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |datapath|reg:PCReg|output[2]                ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |datapath|register_file:RegFile|rd_data0[3]  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |datapath|register_file:RegFile|rd_data1[31] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|mux4to1:RegBMux|output[1]          ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; No         ; |datapath|Memory:Mem|SIG_data_out[28]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |datapath|Memory:Mem|SIG_data_out[7]         ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |datapath|mux4to1:RegBMux|output[6]          ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |datapath|mux4to1:RegBMux|output[25]         ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; No         ; |datapath|ALU_Main:ALU|Add0                  ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; No         ; |datapath|ALU_Main:ALU|Add0                  ;
+; 36:1               ; 8 bits    ; 192 LEs       ; 0 LEs                ; 192 LEs                ; No         ; |datapath|ALU_Main:ALU|Mux16                 ;
+; 38:1               ; 7 bits    ; 175 LEs       ; 0 LEs                ; 175 LEs                ; No         ; |datapath|ALU_Main:ALU|Mux8                  ;
+; 38:1               ; 4 bits    ; 100 LEs       ; 0 LEs                ; 100 LEs                ; No         ; |datapath|ALU_Main:ALU|Mux24                 ;
+; 40:1               ; 4 bits    ; 104 LEs       ; 0 LEs                ; 104 LEs                ; No         ; |datapath|ALU_Main:ALU|Mux7                  ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; No         ; |datapath|ALU_Main:ALU|Mux29                 ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; No         ; |datapath|ALU_Main:ALU|Mux2                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memory:Mem|RAM:Storage|altsyncram:altsyncram_component|altsyncram_d4o3:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                             ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                              ;
++---------------------------------+--------------------+------+------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:PCReg ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; width          ; 32    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:MemDataReg ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; width          ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:RegA ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; width          ; 32    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:RegB ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; width          ; 32    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:ALUOut ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; width          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:RegLow ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; width          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:RegHigh ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; width          ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:CodeMux ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; width          ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:RegDstMux ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; width          ; 5     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:MemtoRegMux ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; width          ; 32    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:RegAMux ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; width          ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux3to1:PCSourceMux ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; width          ; 32    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux3to1:ALUMux ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; width          ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4to1:RegBMux ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; width          ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shift_left_2:ShiftLeftBMux ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; width          ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shift_left_2:ShiftLeftPCMux ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 28    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:Mem|RAM:Storage|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------+
+; Parameter Name                     ; Value                ; Type                                    ;
++------------------------------------+----------------------+-----------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                 ;
+; WIDTH_A                            ; 32                   ; Signed Integer                          ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                          ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; WIDTH_B                            ; 1                    ; Signed Integer                          ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                          ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                 ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA             ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                          ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_d4o3      ; Untyped                                 ;
++------------------------------------+----------------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:Mem|reg:InputPort0 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; width          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:Mem|reg:InputPort1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; width          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:Mem|reg:OutputPort ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; width          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                   ;
++-------------------------------------------+--------------------------------------------------------+
+; Name                                      ; Value                                                  ;
++-------------------------------------------+--------------------------------------------------------+
+; Number of entity instances                ; 1                                                      ;
+; Entity Instance                           ; Memory:Mem|RAM:Storage|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                            ;
+;     -- WIDTH_A                            ; 32                                                     ;
+;     -- NUMWORDS_A                         ; 256                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 1                                                      ;
+;     -- NUMWORDS_B                         ; 0                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
++-------------------------------------------+--------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "ALU_Control:ALUCtrl" ;
++-----------+-------+----------+------------------+
+; Port      ; Type  ; Severity ; Details          ;
++-----------+-------+----------+------------------+
+; hi_en     ; Input ; Info     ; Stuck at GND     ;
+; lo_en     ; Input ; Info     ; Stuck at GND     ;
+; alu_lo_hi ; Input ; Info     ; Stuck at GND     ;
++-----------+-------+----------+------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "shift_left_2:ShiftLeftPCMux" ;
++---------------+-------+----------+----------------------+
+; Port          ; Type  ; Severity ; Details              ;
++---------------+-------+----------+----------------------+
+; input[27..26] ; Input ; Info     ; Stuck at GND         ;
++---------------+-------+----------+----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "mux4to1:RegBMux"     ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; input2[31..3] ; Input ; Info     ; Stuck at GND ;
+; input2[1..0]  ; Input ; Info     ; Stuck at GND ;
+; input2[2]     ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "mux3to1:ALUMux" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; sel  ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "reg:RegHigh"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "reg:RegLow"   ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "reg:ALUOut"   ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "reg:RegB"     ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "reg:RegA"     ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
++--------+-------+----------+--------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "reg:MemDataReg" ;
++--------+-------+----------+----------------+
+; Port   ; Type  ; Severity ; Details        ;
++--------+-------+----------+----------------+
+; enable ; Input ; Info     ; Stuck at VCC   ;
++--------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 71                          ;
+; cycloneiii_ff         ; 1185                        ;
+;     CLR               ; 74                          ;
+;     ENA               ; 37                          ;
+;     ENA CLR           ; 1073                        ;
+;     ENA CLR SLD       ; 1                           ;
+; cycloneiii_lcell_comb ; 1031                        ;
+;     normal            ; 1031                        ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 81                          ;
+;         4 data inputs ; 884                         ;
+; cycloneiii_ram_block  ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.68                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon Nov 20 23:05:40 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final_Project -c Final_Project
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/register file/register_file.vhd
+    Info (12022): Found design unit 1: register_file-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd Line: 24
+    Info (12023): Found entity 1: register_file File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/instruction register/instruction_register.vhd
+    Info (12022): Found design unit 1: instruction_register-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd Line: 18
+    Info (12023): Found entity 1: instruction_register File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/zero_extend.vhd
+    Info (12022): Found design unit 1: zero_extend-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd Line: 12
+    Info (12023): Found entity 1: zero_extend File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/sign_extend.vhd
+    Info (12022): Found design unit 1: sign_extend-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd Line: 12
+    Info (12023): Found entity 1: sign_extend File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/shift_left_2.vhd
+    Info (12022): Found design unit 1: shift_left_2-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd Line: 15
+    Info (12023): Found entity 1: shift_left_2 File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/reg.vhd
+    Info (12022): Found design unit 1: reg-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 16
+    Info (12023): Found entity 1: reg File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/mux4to1.vhd
+    Info (12022): Found design unit 1: mux4to1-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd Line: 20
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/mux3to1.vhd
+    Info (12022): Found design unit 1: mux3to1-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd Line: 19
+    Info (12023): Found entity 1: mux3to1 File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/mux2to1.vhd
+    Info (12022): Found design unit 1: mux2to1-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd Line: 18
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/generic components/concat.vhd
+    Info (12022): Found design unit 1: concat-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd Line: 13
+    Info (12023): Found entity 1: concat File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/datapath/datapath.vhd
+    Info (12022): Found design unit 1: datapath-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 41
+    Info (12023): Found entity 1: datapath File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/alu_control/alu_control.vhd
+    Info (12022): Found design unit 1: ALU_Control-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd Line: 14
+    Info (12023): Found entity 1: ALU_Control File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/alu/alu_main.vhd
+    Info (12022): Found design unit 1: ALU_Main-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd Line: 38
+    Info (12023): Found entity 1: ALU_Main File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/memory/memory.vhd
+    Info (12022): Found design unit 1: Memory-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 26
+    Info (12023): Found entity 1: Memory File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-SYN File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd Line: 55
+    Info (12023): Found entity 1: RAM File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd Line: 43
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Datapath.vhd(29): used implicit default value for signal "ControllerOpCode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+Warning (10540): VHDL Signal Declaration warning at Datapath.vhd(64): used explicit default value for signal "four_to_BMux" because signal was never assigned a value File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 64
+Warning (10540): VHDL Signal Declaration warning at Datapath.vhd(78): used explicit default value for signal "RegLow_en" because signal was never assigned a value File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 78
+Warning (10540): VHDL Signal Declaration warning at Datapath.vhd(79): used explicit default value for signal "RegHigh_en" because signal was never assigned a value File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 79
+Warning (10540): VHDL Signal Declaration warning at Datapath.vhd(80): used explicit default value for signal "ALU_Low_High" because signal was never assigned a value File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 80
+Info (12128): Elaborating entity "reg" for hierarchy "reg:PCReg" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at reg.vhd(22): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 22
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:CodeMux" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 161
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:RegDstMux" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 169
+Info (12128): Elaborating entity "mux3to1" for hierarchy "mux3to1:PCSourceMux" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 198
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:RegBMux" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 218
+Info (12128): Elaborating entity "zero_extend" for hierarchy "zero_extend:ZeroExtend" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 233
+Info (12128): Elaborating entity "sign_extend" for hierarchy "sign_extend:SignExtend" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 239
+Info (12128): Elaborating entity "shift_left_2" for hierarchy "shift_left_2:ShiftLeftBMux" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 245
+Info (12128): Elaborating entity "shift_left_2" for hierarchy "shift_left_2:ShiftLeftPCMux" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 251
+Info (12128): Elaborating entity "concat" for hierarchy "concat:PCConcat" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 260
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:Mem" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 273
+Warning (10492): VHDL Process Statement warning at Memory.vhd(92): signal "SIG_inPort_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at Memory.vhd(99): signal "SIG_inPort_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at Memory.vhd(108): signal "SIG_ram_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 108
+Warning (10631): VHDL Process Statement warning at Memory.vhd(78): inferring latch(es) for signal or variable "SIG_data_out", which holds its previous value in one or more paths through the process File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[0]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[1]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[2]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[3]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[4]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[5]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[6]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[7]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[8]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[9]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[10]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[11]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[12]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[13]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[14]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[15]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[16]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[17]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[18]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[19]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[20]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[21]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[22]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[23]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[24]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[25]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[26]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[27]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[28]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[29]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[30]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (10041): Inferred latch for "SIG_data_out[31]" at Memory.vhd(78) File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+Info (12128): Elaborating entity "RAM" for hierarchy "Memory:Mem|RAM:Storage" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 36
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Memory:Mem|RAM:Storage|altsyncram:altsyncram_component" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "Memory:Mem|RAM:Storage|altsyncram:altsyncram_component" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd Line: 62
+Info (12133): Instantiated megafunction "Memory:Mem|RAM:Storage|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd Line: 62
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "OLD_DATA"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d4o3.tdf
+    Info (12023): Found entity 1: altsyncram_d4o3 File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/db/altsyncram_d4o3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_d4o3" for hierarchy "Memory:Mem|RAM:Storage|altsyncram:altsyncram_component|altsyncram_d4o3:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "instruction_register" for hierarchy "instruction_register:InstReg" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 289
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:RegFile" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 302
+Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:ALUCtrl" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 317
+Warning (10541): VHDL Signal Declaration warning at ALU_Control.vhd(10): used implicit default value for signal "OPSelect" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd Line: 10
+Info (12128): Elaborating entity "ALU_Main" for hierarchy "ALU_Main:ALU" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 328
+Warning (13012): Latch Memory:Mem|SIG_data_out[14] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[20] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[19] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[18] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[17] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[16] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[15] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[13] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[12] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[11] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[10] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[9] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[8] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[7] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[6] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[5] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[4] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[3] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[2] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[1] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[0] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[25] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[24] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[23] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[22] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[21] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[26] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[27] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[28] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[29] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[30] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13012): Latch Memory:Mem|SIG_data_out[31] has unsafe behavior File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg:PCReg|output[16] File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd Line: 20
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ControllerOpCode[0]" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+    Warning (13410): Pin "ControllerOpCode[1]" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+    Warning (13410): Pin "ControllerOpCode[2]" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+    Warning (13410): Pin "ControllerOpCode[3]" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+    Warning (13410): Pin "ControllerOpCode[4]" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+    Warning (13410): Pin "ControllerOpCode[5]" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 29
+    Warning (13410): Pin "BranchTaken" is stuck at GND File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 32
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 86 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "IRWrite" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 20
+    Warning (15610): No output dependent on input pin "IsSigned" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 22
+    Warning (15610): No output dependent on input pin "ALUOp[0]" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "ALUOp[1]" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "ALUSrcB[0]" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 26
+    Warning (15610): No output dependent on input pin "ALUSrcB[1]" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 26
+    Warning (15610): No output dependent on input pin "PCWriteCond" File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd Line: 14
+Info (21057): Implemented 2219 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 2116 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Mon Nov 20 23:05:53 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
+
+
