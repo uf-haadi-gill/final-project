@@ -25,11 +25,11 @@ end Memory;
 
 architecture logic of Memory is 
 
-   signal SIG_data_out   : std_logic_vector(31 downto 0) := (others => '0');
+    signal SIG_data_out   : std_logic_vector(31 downto 0) := (others => '0');
     signal SIG_ram_out    : std_logic_vector(31 downto 0) := (others => '0');
     signal SIG_inPort_0   : std_logic_vector(31 downto 0) := (others => '0');
     signal SIG_inPort_1   : std_logic_vector(31 downto 0) := (others => '0');
-    signal SIG_outPort_en : std_logic := '0';
+      signal SIG_outPort_en : std_logic := '0';
     signal SIG_ram_en     : std_logic := '0';
 
 begin
@@ -75,14 +75,14 @@ begin
     --SIG_ram_en <= '1' when ((memWrite = '1') and (not baddr = x"0000FFF8") and (not baddr = x"0000FFFC")) else
     --             '0';
 
-    process( baddr, dataIn, memRead, memWrite, rst)
+    process( baddr, dataIn, memRead, memWrite, SIG_ram_out)--, rst)
     begin 
-        if (rst = '1') then
-            SIG_data_out <= (others => '0');
-            SIG_outPort_en <= '0';
-            SIG_ram_en <= '0';
+        -- if (rst = '1') then
+        --     SIG_data_out <= (others => '0');
+        --     SIG_outPort_en <= '0';
+        --     SIG_ram_en <= '0';
             
-        else--elsif (rising_edge(clk)) then
+        -- else--elsif (rising_edge(clk)) then
             -- reset enable signals 
             SIG_outPort_en <= '0';
             SIG_ram_en <= '0';
@@ -108,8 +108,10 @@ begin
                 SIG_data_out <= SIG_ram_out;
                 SIG_ram_en <= memWrite;
             end if;
-        end if;
+        
+        -- end if;
     end process;
+    
     dataOut <= SIG_data_out;
             
 

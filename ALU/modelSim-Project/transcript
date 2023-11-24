@@ -1,23 +1,50 @@
-# Compile of Memory.vhd failed with 12 errors.
-# Compile of Memory_TB.vhd was successful.
-# 2 compiles, 1 failed with 12 errors.
-# Compile of Memory.vhd failed with 12 errors.
-# Compile of Memory_TB.vhd was successful.
-# Compile of RAM.vhd was successful.
-# 3 compiles, 1 failed with 12 errors.
-# Compile of Memory.vhd failed with 9 errors.
-# Compile of Memory_TB.vhd was successful.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Main_Deliverable_TB.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_main_deliverable_tb
+# vsim -gui work.alu_main_deliverable_tb 
+# Start time: 16:20:14 on Nov 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_main_deliverable_tb(tb)
+# Loading work.alu_main(logic)
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 2 descending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 2 descending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 2 descending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 2 descending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position end  sim:/alu_main_deliverable_tb/A
+add wave -position end  sim:/alu_main_deliverable_tb/B
+add wave -position end  sim:/alu_main_deliverable_tb/Branch_Taken
+add wave -position end  sim:/alu_main_deliverable_tb/OP_Select
+add wave -position end  sim:/alu_main_deliverable_tb/Result_High
+add wave -position end  sim:/alu_main_deliverable_tb/Result_Low
+add wave -position end  sim:/alu_main_deliverable_tb/Shift_Amount
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlftqayj9t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqayj9t
+run -all
+# ** Note: DONE!!!!!!
+#    Time: 240 ns  Iteration: 0  Instance: /alu_main_deliverable_tb
+quit -sim
+# End time: 16:22:04 on Nov 21,2023, Elapsed time: 0:01:50
+# Errors: 0, Warnings: 7
 # Compile of RAM.vhd was successful.
 # Compile of reg.vhd was successful.
-# 4 compiles, 1 failed with 9 errors.
-# Compile of reg.vhd was successful.
-# Compile of RAM.vhd was successful.
 # Compile of Memory.vhd was successful.
 # Compile of Memory_TB.vhd was successful.
 # 4 compiles, 0 failed with no errors.
 vsim -gui work.memory_tb
 # vsim -gui work.memory_tb 
-# Start time: 13:32:27 on Nov 21,2023
+# Start time: 16:23:09 on Nov 21,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -47,9 +74,9 @@ add wave -position end  sim:/memory_tb/OutPort
 add wave -position end  sim:/memory_tb/rst
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
-#           Attempting to use alternate WLF file "./wlftg1gcc7".
+#           Attempting to use alternate WLF file "./wlftcsi5k0".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftg1gcc7
+#           Using alternate file: ./wlftcsi5k0
 run -all
 # ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
 #    Time: 60 ns  Iteration: 0  Instance: /memory_tb
@@ -79,5 +106,692 @@ run -all
 #    Time: 260 ns  Iteration: 0  Instance: /memory_tb
 # ** Note: DONE!!!!!!
 #    Time: 275 ns  Iteration: 0  Instance: /memory_tb
-# End time: 14:07:58 on Nov 21,2023, Elapsed time: 0:35:31
-# Errors: 0, Warnings: 13
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+add wave -position end  sim:/memory_tb/UUT/SIG_data_out
+add wave -position end  sim:/memory_tb/UUT/SIG_inPort_0
+add wave -position end  sim:/memory_tb/UUT/SIG_inPort_1
+add wave -position end  sim:/memory_tb/UUT/SIG_outPort_en
+add wave -position end  sim:/memory_tb/UUT/SIG_ram_en
+add wave -position end  sim:/memory_tb/UUT/SIG_ram_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+run -all
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+run -all
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd failed with 5 errors.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 1 failed with 5 errors.
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd failed with 15 errors.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 1 failed with 15 errors.
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000000 incorrect (should show 0x0A0A0A0A)
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Warning: Read from byte address 0x00000004 incorrect (should show 0xF0F0F0F0)
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+run -all
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd failed with 2 errors.
+# 4 compiles, 1 failed with 2 errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+run -all
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 240 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 260 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 275 ns  Iteration: 0  Instance: /memory_tb
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of Memory_TB.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -force
+run -all
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memory_tb(tb)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.reg(logic)
+# ** Note: Write 0x0A0A0A0A to byte address 0x00000000 here.
+#    Time: 60 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0xF0F0F0F0 to byte address 0x00000004 here.
+#    Time: 80 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000000 here.
+#    Time: 100 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000001 here.
+#    Time: 120 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000004 here.
+#    Time: 140 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from byte address 0x00000005 here.
+#    Time: 160 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Write 0x00001111 to the outport here.
+#    Time: 180 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00010000 into inport 0 here.
+#    Time: 200 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Load 0x00000001 into inport 1 here.
+#    Time: 220 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 0 happened here.
+#    Time: 250 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: Read from inport 1 happened here.
+#    Time: 290 ns  Iteration: 0  Instance: /memory_tb
+# ** Note: DONE!!!!!!
+#    Time: 305 ns  Iteration: 0  Instance: /memory_tb
+# End time: 16:59:44 on Nov 21,2023, Elapsed time: 0:36:35
+# Errors: 0, Warnings: 1

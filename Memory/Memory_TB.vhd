@@ -128,6 +128,7 @@ begin --TB
         report "Load 0x00000001 into inport 1 here." severity note;
 
         -- Read from inport 0 (should show 0x00010000 on read data output)
+        wait until rising_edge(clk);
         MemRead <= '1';
         Baddr <= x"0000FFF8";
         wait for 20 ns;
@@ -136,6 +137,7 @@ begin --TB
         report "Read from inport 0 happened here." severity note;
 
         -- Read from inport 1 (should show 0x00000001 on read data output)
+        wait until rising_edge(clk);
         MemRead <= '1';
         Baddr <= x"0000FFFC";
         wait for 20 ns;

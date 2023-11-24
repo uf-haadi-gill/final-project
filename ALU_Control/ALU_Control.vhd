@@ -13,5 +13,17 @@ end ALU_Control;
 
 architecture logic of ALU_Control is
 begin 
+-- follow similar if not same states as controller 
+-- immediate and not immediate both have the same code, just treat the input source as different 
+
+-- general notes for the next part: 
+--      > load word store word oh my god so much 
+--      > start one at a time, with load word or store word are you writing all this?
+--      > start with the memory branch of the state amchine from the diagram and set all the values accordingly 
+--      > test things in a test bench  
+--          ~ how to look at memory: there is a file he sent you look at that 
+--      > branch and jump, non sequential
+--          ~  branch is conditional, jump you always jump 
+--          ~ oopsie poopsie
 
 end logic;
