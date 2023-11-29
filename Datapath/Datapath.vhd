@@ -28,9 +28,9 @@ entity datapath is
         RegDst           : in  std_logic;
         ControllerOpCode : out std_logic_vector(5 downto 0);
 
-        -- ALU Outs
-        BranchTaken      : buffer std_logic;
-        --PC_Mux : out std_logic_vector(31 downto 0);
+        -- -- ALU Outs
+        -- BranchTaken      : buffer std_logic;
+        -- --PC_Mux : out std_logic_vector(31 downto 0);
 
         -- General Inputs
         clk, rst        : in std_logic
@@ -40,48 +40,50 @@ end datapath;
 
 architecture logic of datapath is
 
-    signal PCReg_to_CodeMux      : std_logic_vector(31 downto 0) := (others => '0');
-    signal ALUOut_to_CodeMux     : std_logic_vector(31 downto 0) := (others => '0');
-    signal CodeMux_to_Memory     : std_logic_vector(31 downto 0) := (others => '0');
-    signal ZeroEx_to_Memory      : std_logic_vector(31 downto 0) := (others => '0');
-    signal Memory_to_Reg         : std_logic_vector(31 downto 0) := (others => '0');
-    signal MemReg_to_DataMux     : std_logic_vector(31 downto 0) := (others => '0');
-    signal ALUMux_to_DataMux     : std_logic_vector(31 downto 0) := (others => '0');
-    signal DataMux_to_RegFile    : std_logic_vector(31 downto 0) := (others => '0');
-    signal IR_15_to_0            : std_logic_vector(15 downto 0) := (others => '0');
-    signal IR_15_to_11           : std_logic_vector(4  downto 0) := (others => '0');
-    signal IR_20_to_16           : std_logic_vector(4  downto 0) := (others => '0');
-    signal IR_25_to_21           : std_logic_vector(4  downto 0) := (others => '0');
-    signal IR_31_to_26           : std_logic_vector(5  downto 0) := (others => '0');
-    signal IR_25_to_0            : std_logic_vector(25 downto 0) := (others => '0');
-    signal IRMux1_to_RFReg       : std_logic_vector(4  downto 0) := (others => '0');
-    signal IRMux2_to_RFData      : std_logic_vector(31 downto 0) := (others => '0');
-    signal Data1_to_RegA         : std_logic_vector(31 downto 0) := (others => '0');
-    signal Data2_to_RegB         : std_logic_vector(31 downto 0) := (others => '0');
-    signal SignEx_to_ShiftLeft   : std_logic_vector(31 downto 0) := (others => '0');
-    signal ShiftLeft_to_BMux     : std_logic_vector(31 downto 0) := (others => '0');
-    signal RegB_to_BMux          : std_logic_vector(31 downto 0) := (others => '0');
-    signal four_to_BMux             : std_logic_vector(31 downto 0) := x"00000004";
-    signal BMux_to_ALUMain       : std_logic_vector(31 downto 0) := (others => '0');
-    signal RegA_to_AMux          : std_logic_vector(31 downto 0) := (others => '0');
-    signal AMux_to_ALUMain       : std_logic_vector(31 downto 0) := (others => '0');
-    signal ShiftLeft2_to_Concat  : std_logic_vector(27 downto 0) := (others => '0');
-    signal Concat_to_PCMux       : std_logic_vector(31 downto 0) := (others => '0');
-    signal ResultLow_to_RegLow   : std_logic_vector(31 downto 0) := (others => '0');
-    signal ResultHigh_to_RegHigh : std_logic_vector(31 downto 0) := (others => '0');
-    signal RegOut_to_ALUMux      : std_logic_vector(31 downto 0) := (others => '0');
-    signal RegLow_to_ALUMux      : std_logic_vector(31 downto 0) := (others => '0');
-    signal RegHigh_to_ALUMux     : std_logic_vector(31 downto 0) := (others => '0');
-    signal PCMux_to_PCReg        : std_logic_vector(31 downto 0) := (others => '0');
-    signal ALUCtrl_to_ALUMain    : std_logic_vector(4  downto 0) := (others => '0');
+    signal PCReg_to_CodeMux      : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ALUOut_to_CodeMux     : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal CodeMux_to_Memory     : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ZeroEx_to_Memory      : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal Memory_to_Reg         : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal MemReg_to_DataMux     : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ALUMux_to_DataMux     : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal DataMux_to_RegFile    : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal IR_15_to_0            : std_logic_vector(15 downto 0);-- := (others => '0');
+    signal IR_15_to_11           : std_logic_vector(4  downto 0);-- := (others => '0');
+    signal IR_20_to_16           : std_logic_vector(4  downto 0);-- := (others => '0');
+    signal IR_25_to_21           : std_logic_vector(4  downto 0);-- := (others => '0');
+    signal IR_31_to_26           : std_logic_vector(5  downto 0);-- := (others => '0');
+    signal IR_25_to_0            : std_logic_vector(25 downto 0);-- := (others => '0');
+    signal IRMux1_to_RFReg       : std_logic_vector(4  downto 0);-- := (others => '0');
+    signal IRMux2_to_RFData      : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal Data1_to_RegA         : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal Data2_to_RegB         : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal SignEx_to_ShiftLeft   : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ShiftLeft_to_BMux     : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal RegB_to_BMux          : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal BMux_to_ALUMain       : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal RegA_to_AMux          : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal AMux_to_ALUMain       : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ShiftLeft2_to_Concat  : std_logic_vector(27 downto 0);-- := (others => '0');
+    signal Concat_to_PCMux       : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ResultLow_to_RegLow   : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ResultHigh_to_RegHigh : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal RegOut_to_ALUMux      : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal RegLow_to_ALUMux      : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal RegHigh_to_ALUMux     : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal PCMux_to_PCReg        : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal ALUCtrl_to_ALUMain    : std_logic_vector(4  downto 0);-- := (others => '0');
 
-    signal RegLow_en : std_logic := '0';
-    signal RegHigh_en : std_logic := '0';
-    signal ALU_Low_High : std_logic_vector(1 downto 0) := (others => '0');
+    signal RegLow_en : std_logic;-- := '0';
+    signal RegHigh_en : std_logic;-- := '0';
+    signal BranchTaken : std_logic;
+    signal ALU_Low_High : std_logic_vector(1 downto 0);-- := (others => '0');
 
-    
+    signal PCEnable : std_logic;
 
 begin
+
+    PCEnable <= PCWrite or (BranchTaken and PCWriteCond);
     ---------------------------------------------------------------------
     --
     --                     Registers
@@ -92,7 +94,7 @@ begin
         input  => PCMux_to_PCReg,
         clk    => clk, 
         rst    => rst, 
-        enable => PCWrite or (BranchTaken and PCWriteCond),
+        enable => PCEnable,
         output => PCReg_to_CodeMux
     );
 
@@ -218,7 +220,7 @@ begin
     RegBMux : entity work.mux4to1
     port map(
         input1 => RegB_to_BMux,
-        input2 => four_to_BMux,
+        input2 => x"00000004",
         input3 => SignEx_to_ShiftLeft,
         input4 => ShiftLeft_to_BMux,
         sel    => ALUSrcB,
@@ -239,6 +241,7 @@ begin
     SignExtend : entity work.sign_extend
     port map(
         input  => IR_15_to_0,
+        check_signed => IsSigned,
         output => SignEx_to_ShiftLeft
     );
 
@@ -313,7 +316,7 @@ InstReg : entity work.Instruction_register
         rd_data0    => Data1_to_RegA,
         rd_data1    => Data2_to_RegB
     );
-
+----
     ALUCtrl : entity work.ALU_Control
     port map(
         HI_en     => RegHigh_en,

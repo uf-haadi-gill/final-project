@@ -52,7 +52,7 @@ architecture logic of ALU_Main is
     -- Subtract B from A, i.e., A - B
     constant SubtractAB   : std_logic_vector(4 downto 0) := "00100";
     -- Subtract A from B, i.e., B - A
-    constant SubtractBA   : std_logic_vector(4 downto 0) := "00101";
+    constant ALTBSigned   : std_logic_vector(4 downto 0) := "00101";
     -- Logical Shift Left, A
     constant LSLA         : std_logic_vector(4 downto 0) := "00110";
     -- Logical Shift Right, A
@@ -94,15 +94,15 @@ architecture logic of ALU_Main is
     -- Bitwise XOR operation of A and B
     constant AXORB        : std_logic_vector(4 downto 0) := "11001";
     -- Bitwise NOR operation of A and B
-    constant ANORB        : std_logic_vector(4 downto 0) := "11010";
+    constant BEQ        : std_logic_vector(4 downto 0) := "11010";
     -- Bitwise XNOR operation of A and B
-    constant AXNORB       : std_logic_vector(4 downto 0) := "11011";
+    constant BNEQ       : std_logic_vector(4 downto 0) := "11011";
     -- Set branch taken if A is less than or equal to B
-    constant BLEB         : std_logic_vector(4 downto 0) := "11100";
+    constant BGEZ         : std_logic_vector(4 downto 0) := "11100";
     -- Set branch taken if A is less than or equal to 0
     constant BLEZ         : std_logic_vector(4 downto 0) := "11101";
     -- Set branch taken if A is greater than B
-    constant BGTB         : std_logic_vector(4 downto 0) := "11110";
+    constant BLTZ         : std_logic_vector(4 downto 0) := "11110";
     -- Set branch taken if A is greater than 0
     constant BGZ         : std_logic_vector(4 downto 0) := "11111";
 
@@ -149,9 +149,12 @@ architecture logic of ALU_Main is
                 -- STATUS : FUNCTIONAL
                 SIG_Result_Low <= std_logic_vector(unsigned(A) - unsigned(B));
 
-            when SubtractBA   =>
-                -- STATUS : UNTESTED
-                SIG_Result_Low <= std_logic_vector(unsigned(B) - unsigned(A));
+            when ALTBSigned   =>
+                if signed(A) < signed(B) then 
+                    SIG_Result_Low <= x"00000001";
+                else 
+                    SIG_Result_Low <= x"00000000";
+                end if;
 
             when LSRA         =>
                 -- STATUS : UNTESTED
@@ -249,17 +252,25 @@ architecture logic of ALU_Main is
                 -- STATUS: UNTESTED
                 SIG_Result_Low <= A xor B;
 
-            when ANORB        =>
-                -- STATUS: UNTESTED
-                SIG_Result_Low <= A nor B;
+            when BEQ        =>
+            -- STATUS: UNTESTED
+            if A = B then 
+                SIG_Branch <= '1';
+            else 
+                SIG_Branch <= '0';
+            end if;
 
-            when AXNORB       =>
-                -- STATUS: UNTESTED
-                SIG_Result_Low <= A xnor B;
+            when BNEQ       =>
+            -- STATUS: UNTESTED
+            if A = B then 
+                SIG_Branch <= '0';
+            else 
+                SIG_Branch <= '1';
+            end if;
 
-            when BLEB =>
+            when BGEZ =>
                 -- STATUS: UNTESTED
-                if A < B or A = B then 
+                if signed(A) > 0 or signed(A) = 0 then 
                     SIG_Branch <= '1';
                 else 
                     SIG_Branch <= '0';
@@ -267,15 +278,15 @@ architecture logic of ALU_Main is
 
             when BLEZ =>
                 -- STATUS: UNTESTED
-                if unsigned(A) < 0 or unsigned(A) = 0 then 
+                if signed(A) < 0 or signed(A) = 0 then 
                     SIG_Branch <= '1';
                 else 
                     SIG_Branch <= '0';
                 end if;
 
-            when BGTB =>
+            when BLTZ =>
                 -- STATUS: UNTESTED
-                if A > B then 
+                if signed(A) < 0 then 
                     SIG_Branch <= '1';
                 else 
                     SIG_Branch <= '0';
@@ -283,7 +294,7 @@ architecture logic of ALU_Main is
 
             when BGZ =>
                 -- STATUS: UNTESTED
-                if unsigned(A) > 0 then
+                if signed(A) > 0 then
                     SIG_Branch <= '1';
                 else 
                     SIG_Branch <= '0';
