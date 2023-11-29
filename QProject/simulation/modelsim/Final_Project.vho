@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/29/2023 00:57:34"
+-- DATE "11/29/2023 14:37:03"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -88,7 +88,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	topLevel IS
     PORT (
-	LEDs : OUT std_logic_vector(31 DOWNTO 0);
+	LEDs : BUFFER std_logic_vector(31 DOWNTO 0);
 	Switches : IN std_logic_vector(9 DOWNTO 0);
 	button0 : IN std_logic;
 	button1 : IN std_logic;

@@ -79,11 +79,22 @@ architecture logic of datapath is
     signal BranchTaken : std_logic;
     signal ALU_Low_High : std_logic_vector(1 downto 0);-- := (others => '0');
 
+    signal SIG_button0 : std_logic;
+    signal SIG_button1 : std_logic;
+
+    signal SIG_IRShift : std_logic_vector(27 downto 0);
+
+
+
     signal PCEnable : std_logic;
 
 begin
 
     PCEnable <= PCWrite or (BranchTaken and PCWriteCond);
+    SIG_button0 <= not button0;
+    SIG_button1 <= not button1;
+    SIG_IRShift <= "00" & IR_25_to_0;
+    
     ---------------------------------------------------------------------
     --
     --                     Registers
@@ -256,7 +267,7 @@ begin
         WIDTH => 28
     )
     port map(
-        input  => "00" & IR_25_to_0,
+        input  => SIG_IRShift,
         output => ShiftLeft2_to_Concat
     );
 
@@ -281,8 +292,8 @@ begin
         InPort1_in => ZeroEx_to_Memory,
         memRead    => MemRead,
         memWrite   => MemWrite,
-        InPort0_en => not button0,
-        InPort1_en => not button1,
+        InPort0_en => SIG_button0,
+        InPort1_en => SIG_button1,
         clk        => clk,
         rst        => rst,
         dataOut    => Memory_to_Reg,

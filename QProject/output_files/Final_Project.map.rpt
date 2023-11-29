@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Final_Project
-Wed Nov 29 00:57:17 2023
+Wed Nov 29 14:36:38 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 29 00:57:17 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 29 14:36:38 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Final_Project                               ;
 ; Top-level Entity Name              ; topLevel                                    ;
@@ -3346,7 +3346,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -3356,10 +3356,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 29 00:57:05 2023
+    Info: Processing started: Wed Nov 29 14:36:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final_Project -c Final_Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/toplevel/toplevel_tb.vhd
+    Info (12022): Found design unit 1: topLevel_tb-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd Line: 8
+    Info (12023): Found entity 1: topLevel_tb File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/quinc/documents/uf_fall_2023/eel4712c-digital_design/final project/toplevel/toplevel.vhd
     Info (12022): Found design unit 1: topLevel-logic File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd Line: 14
     Info (12023): Found entity 1: topLevel File: C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd Line: 6
@@ -3620,9 +3623,9 @@ Info (21057): Implemented 46 device resources after synthesis - the final resour
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 32 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 4818 megabytes
-    Info: Processing ended: Wed Nov 29 00:57:17 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Wed Nov 29 14:36:38 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:13
 
 

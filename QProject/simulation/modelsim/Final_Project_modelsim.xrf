@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd
 source_file = 1, C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd
 source_file = 1, C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd
 source_file = 1, C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
