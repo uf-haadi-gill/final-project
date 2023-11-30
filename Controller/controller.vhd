@@ -211,6 +211,34 @@ begin
                 ALUSrcB <= "10";
                 next_state <= fetch_1;
 
+            
+            when addi_1 =>
+                ALUOp <= "11";
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
+                next_state <= addi_2;
+
+            when addi_2 => 
+                ALUOp <= "11";
+                ALUSrcA <= '1';
+                RegWrite <= '1';
+                ALUSrcB <= "10";
+                next_state <= fetch_1;
+
+            
+            when subi_1 =>
+                ALUOp <= "11";
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
+                next_state <= subi_2;
+
+            when subi_2 => 
+                ALUOp <= "11";
+                ALUSrcA <= '1';
+                RegWrite <= '1';
+                ALUSrcB <= "10";
+                next_state <= fetch_1;
+
             when ori_1 =>
                 ALUOp <= "11";
                 ALUSrcA <= '1';

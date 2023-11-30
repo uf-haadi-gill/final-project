@@ -158,11 +158,11 @@ architecture logic of ALU_Main is
 
             when LSRA         =>
                 -- STATUS : UNTESTED
-                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(unsigned(A), to_integer(unsigned(Shift_Amount))));
+                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(unsigned(B), to_integer(unsigned(Shift_Amount))));
 
             when LSLA         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(unsigned(A), to_integer(unsigned(Shift_Amount))));
+                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(unsigned(B), to_integer(unsigned(Shift_Amount))));
 
             when LSRB         =>
                 -- STATUS: UNTESTED
@@ -174,11 +174,11 @@ architecture logic of ALU_Main is
 
             when ASLA         =>
                 -- STATUS: UNTESTED
-                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(signed(A), to_integer(unsigned(Shift_Amount))));
+                SIG_Result_Low <= std_logic_vector(SHIFT_LEFT(signed(B), to_integer(unsigned(Shift_Amount))));
 
             when ASRA         =>
                 -- STATUS : UNTESTED
-                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(signed(A), to_integer(unsigned(Shift_Amount))));
+                SIG_Result_Low <= std_logic_vector(SHIFT_RIGHT(signed(B), to_integer(unsigned(Shift_Amount))));
 
             when ASLB         =>
                 -- STATUS: UNTESTED
