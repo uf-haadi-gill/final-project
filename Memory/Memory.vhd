@@ -31,6 +31,7 @@ architecture logic of Memory is
     signal SIG_inPort_1   : std_logic_vector(31 downto 0) := (others => '0');
       signal SIG_outPort_en : std_logic := '0';
     signal SIG_ram_en     : std_logic := '0';
+    signal SIG_baddr_delay : std_logic_vector(31 downto 0);
 
 begin
     Storage : entity work.RAM
@@ -72,6 +73,15 @@ begin
         output => OutPort
     );
 
+    BaddrDelay : entity work.reg
+    port map(
+        input => baddr,
+        clk => clk,
+        rst => rst,
+        enable => '1',
+        output => SIG_baddr_delay
+    );
+
     --SIG_ram_en <= '1' when ((memWrite = '1') and (not baddr = x"0000FFF8") and (not baddr = x"0000FFFC")) else
     --             '0';
 
@@ -88,10 +98,10 @@ begin
             SIG_ram_en <= '0';
 
             -- check if one of the three ports 
-            if (baddr = x"0000FFF8") then
+            if (SIG_baddr_delay = x"0000FFF8") then
                 SIG_data_out <= SIG_inPort_0;
 
-            elsif (baddr = x"0000FFFC") then 
+            elsif (SIG_baddr_delay = x"0000FFFC") then 
                 -- check if outport or inport 1
                 if (memWrite = '1') then
                     SIG_outPort_en <= '1';

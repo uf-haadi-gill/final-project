@@ -6,6 +6,7 @@ entity instruction_register is
     port(
         clk, rst    : in std_logic;
         input       : in std_logic_vector(31 downto 0);
+        IR_Write    : in std_logic;
         out25_to_0  : out std_logic_vector(25 downto 0);
         out31_to_26 : out std_logic_vector(5 downto 0);
         out25_to_21 : out std_logic_vector(4 downto 0);
@@ -27,7 +28,7 @@ begin
             out20_to_16 <= (others => '0');
             out15_to_11 <= (others => '0');
             out15_to_0  <= (others => '0');
-        elsif (rising_edge(clk)) then
+        elsif (rising_edge(clk) and IR_Write = '1') then
             out25_to_0   <= input(25 downto 0);
             out31_to_26  <= input(31 downto 26);
             out25_to_21  <= input(25 downto 21);

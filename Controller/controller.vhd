@@ -52,7 +52,7 @@ begin
         end if;
     end process;
 
-    process(curr_state)
+    process(curr_state, IR_31_to_26)
     begin
 
         -- set all outputs to 0 by default, then set what is needed
@@ -76,12 +76,12 @@ begin
         case(curr_state) is
 
             when fetch_1 =>
-                next_state <= fetch_1;
+                next_state <= fetch_2;
                 MemRead <= '1';
                 ALUSrcB <= "01";
-
-            when fetch_2 =>
                 PCWrite <= '1';
+                
+            when fetch_2 =>
                 IRWrite <= '1';
                 next_state <= decode;
 
@@ -136,7 +136,7 @@ begin
                         next_state <= branch;
 
                     when "000010" =>
-                        next_state <= branch;
+                        next_state <= jump;
 
                     when "000011" =>
                         next_state <= jal_1;
@@ -151,29 +151,32 @@ begin
             when load_1 =>
                 ALUSrcA <= '1';
                 ALUSrcB <= "10";
-                next_state <= load_2;
-
-            when load_2 =>
                 IorD <= '1';
+                next_state <= load_2;
+                
+            when load_2 =>
                 MemRead <= '1';
                 next_state <= load_3;
 
             when load_3 =>
+                MemtoReg <= '1';
+                RegWrite <= '1';
                 next_state <= load_4;
 
             when load_4 =>
-                MemtoReg <= '1';
-                RegWrite <= '1';
                 next_state <= fetch_1;
 
             when store_1 =>
                 ALUSrcA <= '1';
                 ALUSrcB <= "10";
+                IorD <= '1';
                 next_state <= store_2;
 
             when store_2 =>
-                IorD <= '1';
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
                 MemWrite <= '1';
+                IorD <= '1';
                 next_state <= fetch_1;
 
             when rtype_1 =>
@@ -182,7 +185,9 @@ begin
                 next_state <= rtype_2;
             
             when rtype_2 =>
+                ALUOp <= "10";
                 RegWrite <= '1';
+                ALUSrcA <= '1';
                 RegDst <= '1';
                 next_state <= fetch_1;
 
@@ -201,7 +206,9 @@ begin
 
             when andi_2 => 
                 ALUOp <= "11";
+                ALUSrcA <= '1';
                 RegWrite <= '1';
+                ALUSrcB <= "10";
                 next_state <= fetch_1;
 
             when ori_1 =>
@@ -212,6 +219,8 @@ begin
 
             when ori_2 => 
                 ALUOp <= "11";
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
                 RegWrite <= '1';
                 next_state <= fetch_1;
            
@@ -223,6 +232,8 @@ begin
 
             when xori_2 =>
                 ALUOp <= "11";
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
                 RegWrite <= '1';
                 next_state <= fetch_1;
 
@@ -235,7 +246,9 @@ begin
 
             when slti_2 =>
                 ALUOp <= "11";
+                ALUSrcB <= "10";
                 RegWrite <= '1';
+                ALUSrcA <= '1';
                 next_state <= fetch_1;
 
             when sltui_1 =>
@@ -246,6 +259,8 @@ begin
 
             when sltui_2 =>
                 ALUOp <= "11";
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
                 RegWrite <= '1';
                 next_state <= fetch_1;
 

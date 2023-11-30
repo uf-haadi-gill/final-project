@@ -82,7 +82,7 @@ architecture logic of ALU_Main is
     -- Two's Complement, A
     constant TwoCompA     : std_logic_vector(4 downto 0) := "10011";
     -- Two's Complement, B
-    constant TwoCompB     : std_logic_vector(4 downto 0) := "10100";
+    constant AlwaysBranch     : std_logic_vector(4 downto 0) := "10100";
     -- Multiply A and B, treat as unsigned
     constant MultUnsigned : std_logic_vector(4 downto 0) := "10101";
     -- Multiply A and B, tread as signed
@@ -224,9 +224,9 @@ architecture logic of ALU_Main is
                 -- STATUS: UNTESTED
                 SIG_Result_Low <= (not A) + 1;
 
-            when TwoCompB     =>
+            when AlwaysBranch     =>
                 -- STATUS : UNTESTED
-                SIG_Result_Low <= (not B) + 1;
+                SIG_Branch <= '1';
 
             when MultUnsigned =>
                 -- STATUS: UNTESTED

@@ -1,6 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+-----------------------------------------------------------------------------
+--
+--      For HI_en and LO_en, are they set on multiply? 
+--      Or only for Move from hi/lo? 
+--
+------------------------------------------------------------------------------
+
 
 entity ALU_Control is 
     port(
@@ -35,9 +42,13 @@ begin
 
                 when "011000" =>    -- multiply
                     OPSelect <= "10110";
+                    HI_en <= '1';
+                    LO_en <= '1';
 
                 when "011001" =>    -- multiply unsigned
                     OPSelect <= "10101";
+                    HI_en <= '1';
+                    LO_en <= '1';
 
                 when "100100" =>    -- and
                     OPSelect <= "10111";
@@ -65,12 +76,12 @@ begin
 
                 when "010000" =>    -- move from HI
                     OPSelect <= "00000";
-                    HI_en <= '1';
+                    -- HI_en <= '1';
                     ALU_LO_HI <= "10";
 
                 when "010010" =>    -- move from LO
                     OPSelect <= "00000";
-                    LO_en <= '1';
+                    -- LO_en <= '1';
                     ALU_LO_HI <= "01";
 
                 when "001000" =>    -- jump register
@@ -115,11 +126,11 @@ begin
                     when "000111" => -- branch if greater than zero
                         OPSelect <= "11111";
                         
-                    when "000001" => -- branch if less than zero
-                        OPSelect <= "11110";
+                    when "000010" => -- branch if less than zero
+                        OPSelect <= "10100";
                         
                     when "111111" => --branch if greater than or equal to zero
-                        OPSelect <= "11100";
+                        OPSelect <= "10100";
 
                     when others =>
                         OPSelect <= "00000";

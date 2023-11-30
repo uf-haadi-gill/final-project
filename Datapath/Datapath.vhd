@@ -94,6 +94,8 @@ begin
     SIG_button0 <= not button0;
     SIG_button1 <= not button1;
     SIG_IRShift <= "00" & IR_25_to_0;
+    ControllerOpCode <= IR_31_to_26;
+    ALUOut_to_CodeMux <= ResultLow_to_RegLow;
     
     ---------------------------------------------------------------------
     --
@@ -142,7 +144,7 @@ begin
         clk    => clk,
         rst    => rst,
         enable => '1',
-        output => ALUOut_to_CodeMux
+        output => RegOut_to_ALUMux
     );
 
     RegLow : entity work.reg
@@ -192,8 +194,8 @@ begin
 
     MemtoRegMux : entity work.mux2to1
     port map(
-      input1 => MemReg_to_DataMux,
-      input2 => ALUMux_to_DataMux,
+      input2 => MemReg_to_DataMux,
+      input1 => ALUMux_to_DataMux,
       sel    => MemToReg,
       output => IRMux2_to_RFData  
     );
@@ -304,6 +306,7 @@ InstReg : entity work.Instruction_register
     port map(
         clk         => clk, 
         rst         => rst, 
+        IR_Write    => IRWrite,
         input       => Memory_to_Reg,
         out25_to_0  => IR_25_to_0, 
         out31_to_26 => IR_31_to_26,
