@@ -721,3 +721,59 @@ run -all
 #    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
 # Break key hit
 # Simulation stop requested.
+onerror {resume}
+#  Warning: onerror command for use within macro
+project compileall
+# Compile of RAM.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of ALU_Main.vhd was successful.
+# Compile of ALU_Control.vhd was successful.
+# Compile of concat.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux3to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of shift_left_2.vhd was successful.
+# Compile of sign_extend.vhd was successful.
+# Compile of zero_extend.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of Datapath.vhd was successful.
+# Compile of topLevel.vhd was successful.
+# Compile of topLevel_tb.vhd was successful.
+# 18 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.toplevel_tb(logic)
+# Loading work.toplevel(logic)
+# Loading work.controller(logic)
+# Loading work.datapath(logic)
+# Loading work.reg(logic)
+# Loading work.mux2to1(logic)
+# Loading work.mux3to1(logic)
+# Loading work.mux4to1(logic)
+# Loading work.zero_extend(logic)
+# Loading work.sign_extend(logic)
+# Loading work.shift_left_2(logic)
+# Loading work.concat(logic)
+# Loading work.memory(logic)
+# Loading work.ram(syn)
+# Loading work.instruction_register(logic)
+# Loading work.register_file(logic)
+# Loading work.alu_control(logic)
+# Loading work.alu_main(logic)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+# Break key hit
+# Simulation stop requested.
