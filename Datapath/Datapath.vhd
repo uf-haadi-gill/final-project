@@ -84,8 +84,6 @@ architecture logic of datapath is
 
     signal SIG_IRShift : std_logic_vector(27 downto 0);
 
-
-
     signal PCEnable : std_logic;
 
 begin
@@ -213,7 +211,7 @@ begin
     PCSourceMux : entity work.mux3to1
     port map(
         input1 => ResultLow_to_RegLow,
-        input2 => ALUOut_to_CodeMux,
+        input2 => RegOut_to_ALUMux,--ALUOut_to_CodeMux,
         input3 => Concat_to_PCMux,
         sel    => PCSource,
         output => PCMux_to_PCReg

@@ -227,6 +227,7 @@ architecture logic of ALU_Main is
             when AlwaysBranch     =>
                 -- STATUS : UNTESTED
                 SIG_Branch <= '1';
+                -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when MultUnsigned =>
                 -- STATUS: UNTESTED
@@ -259,6 +260,7 @@ architecture logic of ALU_Main is
             else 
                 SIG_Branch <= '0';
             end if;
+            -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when BNEQ       =>
             -- STATUS: UNTESTED
@@ -267,6 +269,7 @@ architecture logic of ALU_Main is
             else 
                 SIG_Branch <= '1';
             end if;
+            -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when BGEZ =>
                 -- STATUS: UNTESTED
@@ -275,6 +278,7 @@ architecture logic of ALU_Main is
                 else 
                     SIG_Branch <= '0';
                 end if;
+                -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when BLEZ =>
                 -- STATUS: UNTESTED
@@ -283,6 +287,7 @@ architecture logic of ALU_Main is
                 else 
                     SIG_Branch <= '0';
                 end if;
+                -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when BLTZ =>
                 -- STATUS: UNTESTED
@@ -291,6 +296,7 @@ architecture logic of ALU_Main is
                 else 
                     SIG_Branch <= '0';
                 end if;
+                -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
 
             when BGZ =>
                 -- STATUS: UNTESTED
@@ -299,6 +305,7 @@ architecture logic of ALU_Main is
                 else 
                     SIG_Branch <= '0';
                 end if;
+                -- SIG_Result_Low <= std_logic_vector(unsigned(A) + unsigned(B));
             
             when others       =>
                 -- STATUS: UNTESTED
