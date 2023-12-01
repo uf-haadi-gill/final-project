@@ -107,8 +107,8 @@ architecture logic of ALU_Main is
     constant BGZ         : std_logic_vector(4 downto 0) := "11111";
 
 
-    signal SIG_Result_Low, SIG_Result_High : std_logic_vector(31 downto 0) := (others => '0');
-    signal SIG_Branch : std_logic := '0'; 
+    signal SIG_Result_Low, SIG_Result_High : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal SIG_Branch : std_logic;-- := '0'; 
     
     begin
         -- always assign outputs to signal values

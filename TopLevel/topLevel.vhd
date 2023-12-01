@@ -6,6 +6,7 @@ use ieee.std_logic_unsigned.all;
 entity topLevel is 
     port(
         LEDs : out std_logic_vector(31 downto 0);
+        
         Switches : in std_logic_vector(9 downto 0);
         button0, button1, clk, rst : in std_logic
     );

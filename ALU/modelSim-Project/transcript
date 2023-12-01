@@ -19,7 +19,7 @@
 # 18 compiles, 0 failed with no errors.
 vsim -gui work.toplevel_tb
 # vsim -gui work.toplevel_tb 
-# Start time: 23:28:36 on Nov 29,2023
+# Start time: 20:56:32 on Nov 30,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -48,98 +48,17 @@ vsim -gui work.toplevel_tb
 # Loading work.register_file(logic)
 # Loading work.alu_control(logic)
 # Loading work.alu_main(logic)
-# Trace back: Error QStructure::sort: invalid command name ""
-#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 2 descending
-#   <5:eval:1: ::QStructure::structsort .main_pane.structure 2 descending
-#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 2 descending
-#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 2 descending
-#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
-#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
-sim:/toplevel_tb/TL/Data/ALU_Low_High sim:/toplevel_tb/TL/Data/ALUCtrl_to_ALUMain sim:/toplevel_tb/TL/Data/ALUMux_to_DataMux sim:/toplevel_tb/TL/Data/ALUOp sim:/toplevel_tb/TL/Data/ALUOut_to_CodeMux sim:/toplevel_tb/TL/Data/ALUSrcA sim:/toplevel_tb/TL/Data/ALUSrcB sim:/toplevel_tb/TL/Data/AMux_to_ALUMain sim:/toplevel_tb/TL/Data/BMux_to_ALUMain sim:/toplevel_tb/TL/Data/BranchTaken sim:/toplevel_tb/TL/Data/clk sim:/toplevel_tb/TL/Control/curr_state sim:/toplevel_tb/TL/Data/ALU/Shift_Amount sim:/toplevel_tb/TL/Data/IR_15_to_0 sim:/toplevel_tb/TL/Data/IR_15_to_11 sim:/toplevel_tb/TL/Data/IR_20_to_16 sim:/toplevel_tb/TL/Data/IR_25_to_0 sim:/toplevel_tb/TL/Data/IR_25_to_21 sim:/toplevel_tb/TL/Data/IR_31_to_26 sim:/toplevel_tb/TL/Data/PCEnable sim:/toplevel_tb/TL/Data/PCMux_to_PCReg sim:/toplevel_tb/TL/Data/PCReg_to_CodeMux sim:/toplevel_tb/TL/Data/PCSource sim:/toplevel_tb/TL/Data/PCWrite sim:/toplevel_tb/TL/Data/PCWriteCond sim:/toplevel_tb/TL/Data/RegA_to_AMux sim:/toplevel_tb/TL/Data/RegB_to_BMux sim:/toplevel_tb/TL/Data/RegDst sim:/toplevel_tb/TL/Data/RegHigh_en sim:/toplevel_tb/TL/Data/RegHigh_to_ALUMux sim:/toplevel_tb/TL/Data/RegLow_en sim:/toplevel_tb/TL/Data/RegLow_to_ALUMux sim:/toplevel_tb/TL/Data/RegOut_to_ALUMux sim:/toplevel_tb/TL/Data/RegWrite sim:/toplevel_tb/TL/Data/ResultHigh_to_RegHigh sim:/toplevel_tb/TL/Data/ResultLow_to_RegLow sim:/toplevel_tb/TL/Data/ALU/Branch_Taken sim:/toplevel_tb/TL/Data/ALU/SIG_Branch sim:/toplevel_tb/rst Memory sim:/toplevel_tb/TL/Data/Mem/InPort0_en sim:/toplevel_tb/TL/Data/Mem/InPort0_in sim:/toplevel_tb/TL/Data/Mem/InPort1_en sim:/toplevel_tb/TL/Data/Mem/InPort1_in sim:/toplevel_tb/TL/Data/Mem/memRead sim:/toplevel_tb/TL/Data/Mem/memWrite sim:/toplevel_tb/TL/Data/Mem/baddr sim:/toplevel_tb/TL/Data/Mem/dataIn sim:/toplevel_tb/TL/Data/Mem/dataOut sim:/toplevel_tb/TL/Data/Mem/OutPort sim:/toplevel_tb/TL/Data/Mem/InputPort0/output sim:/toplevel_tb/TL/Data/Mem/InputPort1/output sim:/toplevel_tb/TL/Data/Mem/OutputPort/output sim:/toplevel_tb/TL/Data/RegFile/regs(0) sim:/toplevel_tb/TL/Data/RegFile/regs(8) sim:/toplevel_tb/TL/Data/RegFile/regs(16) sim:/toplevel_tb/TL/Data/RegFile/regs(17) 
-# invalid command name "sim:/toplevel_tb/TL/Data/ALU_Low_High"
-add wave -position 1  sim:/toplevel_tb/buttons
-add wave -position 2  sim:/toplevel_tb/clk
-add wave -position 3  sim:/toplevel_tb/output
-add wave -position 4  sim:/toplevel_tb/rst
-add wave -position 5  sim:/toplevel_tb/switch_input
+add wave -position end  sim:/toplevel_tb/buttons
+add wave -position end  sim:/toplevel_tb/clk
+add wave -position end  sim:/toplevel_tb/output
+add wave -position end  sim:/toplevel_tb/rst
+add wave -position end  sim:/toplevel_tb/switch_input
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
-#           Attempting to use alternate WLF file "./wlftkf229d".
+#           Attempting to use alternate WLF file "./wlftsb4i7q".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftkf229d
-add wave -position 7  sim:/toplevel_tb/TL/Data/ALU_Low_High
-add wave -position 8  sim:/toplevel_tb/TL/Data/ALUCtrl_to_ALUMain
-add wave -position 9  sim:/toplevel_tb/TL/Data/ALUMux_to_DataMux
-add wave -position 10  sim:/toplevel_tb/TL/Data/ALUOp
-add wave -position 11  sim:/toplevel_tb/TL/Data/ALUOut_to_CodeMux
-add wave -position 12  sim:/toplevel_tb/TL/Data/ALUSrcA
-add wave -position 13  sim:/toplevel_tb/TL/Data/ALUSrcB
-add wave -position 14  sim:/toplevel_tb/TL/Data/AMux_to_ALUMain
-add wave -position 15  sim:/toplevel_tb/TL/Data/BMux_to_ALUMain
-add wave -position 16  sim:/toplevel_tb/TL/Data/BranchTaken
-add wave -position 17  sim:/toplevel_tb/TL/Data/button0
-add wave -position 18  sim:/toplevel_tb/TL/Data/button1
-add wave -position 19  sim:/toplevel_tb/TL/Data/clk
-add wave -position 20  sim:/toplevel_tb/TL/Data/CodeMux_to_Memory
-add wave -position 21  sim:/toplevel_tb/TL/Data/Concat_to_PCMux
-add wave -position 22  sim:/toplevel_tb/TL/Data/ControllerOpCode
-add wave -position 23  sim:/toplevel_tb/TL/Data/Data1_to_RegA
-add wave -position 24  sim:/toplevel_tb/TL/Data/Data2_to_RegB
-add wave -position 25  sim:/toplevel_tb/TL/Data/DataMux_to_RegFile
-add wave -position 26  sim:/toplevel_tb/TL/Data/IorD
-add wave -position 27  sim:/toplevel_tb/TL/Data/IR_15_to_0
-add wave -position 28  sim:/toplevel_tb/TL/Data/IR_15_to_11
-add wave -position 29  sim:/toplevel_tb/TL/Data/IR_20_to_16
-add wave -position 30  sim:/toplevel_tb/TL/Data/IR_25_to_0
-add wave -position 31  sim:/toplevel_tb/TL/Data/IR_25_to_21
-add wave -position 32  sim:/toplevel_tb/TL/Data/IR_31_to_26
-add wave -position 33  sim:/toplevel_tb/TL/Data/IRMux1_to_RFReg
-add wave -position 34  sim:/toplevel_tb/TL/Data/IRMux2_to_RFData
-add wave -position 35  sim:/toplevel_tb/TL/Data/IRWrite
-add wave -position 36  sim:/toplevel_tb/TL/Data/IsSigned
-add wave -position 37  sim:/toplevel_tb/TL/Data/JumpAndLink
-add wave -position 38  sim:/toplevel_tb/TL/Data/LEDs
-add wave -position 39  sim:/toplevel_tb/TL/Data/Memory_to_Reg
-add wave -position 40  sim:/toplevel_tb/TL/Data/MemRead
-add wave -position 41  sim:/toplevel_tb/TL/Data/MemReg_to_DataMux
-add wave -position 42  sim:/toplevel_tb/TL/Data/MemToReg
-add wave -position 43  sim:/toplevel_tb/TL/Data/MemWrite
-add wave -position 44  sim:/toplevel_tb/TL/Data/PCEnable
-add wave -position 45  sim:/toplevel_tb/TL/Data/PCMux_to_PCReg
-add wave -position 46  sim:/toplevel_tb/TL/Data/PCReg_to_CodeMux
-add wave -position 47  sim:/toplevel_tb/TL/Data/PCSource
-add wave -position 48  sim:/toplevel_tb/TL/Data/PCWrite
-add wave -position 49  sim:/toplevel_tb/TL/Data/PCWriteCond
-add wave -position 50  sim:/toplevel_tb/TL/Data/RegA_to_AMux
-add wave -position 51  sim:/toplevel_tb/TL/Data/RegB_to_BMux
-add wave -position 52  sim:/toplevel_tb/TL/Data/RegDst
-add wave -position 53  sim:/toplevel_tb/TL/Data/RegHigh_en
-add wave -position 54  sim:/toplevel_tb/TL/Data/RegHigh_to_ALUMux
-add wave -position 55  sim:/toplevel_tb/TL/Data/RegLow_en
-add wave -position 56  sim:/toplevel_tb/TL/Data/RegLow_to_ALUMux
-add wave -position 57  sim:/toplevel_tb/TL/Data/RegOut_to_ALUMux
-add wave -position 58  sim:/toplevel_tb/TL/Data/RegWrite
-add wave -position 59  sim:/toplevel_tb/TL/Data/ResultHigh_to_RegHigh
-add wave -position 60  sim:/toplevel_tb/TL/Data/ResultLow_to_RegLow
-add wave -position 61  sim:/toplevel_tb/TL/Data/rst
-add wave -position 62  sim:/toplevel_tb/TL/Data/ShiftLeft2_to_Concat
-add wave -position 63  sim:/toplevel_tb/TL/Data/ShiftLeft_to_BMux
-add wave -position 64  sim:/toplevel_tb/TL/Data/SIG_button0
-add wave -position 65  sim:/toplevel_tb/TL/Data/SIG_button1
-add wave -position 66  sim:/toplevel_tb/TL/Data/SIG_IRShift
-add wave -position 67  sim:/toplevel_tb/TL/Data/SignEx_to_ShiftLeft
-add wave -position 68  sim:/toplevel_tb/TL/Data/switches
-add wave -position 69  sim:/toplevel_tb/TL/Data/ZeroEx_to_Memory
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/baddr
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/dataIn
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/dataOut
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/InPort0_en
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/InPort0_in
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/InPort1_en
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/InPort1_in
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/memRead
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/memWrite
-add wave -position end  sim:/toplevel_tb/TL/Data/Mem/OutPort
+#           Using alternate file: ./wlftsb4i7q
+# Can't move the Now cursor.
 onerror {resume}
 #  Warning: onerror command for use within macro
 project compileall
@@ -163,6 +82,7 @@ project compileall
 # Compile of topLevel_tb.vhd was successful.
 # 18 compiles, 0 failed with no errors.
 restart -force
+run -all
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.toplevel_tb(logic)
 # Loading work.toplevel(logic)
@@ -182,7 +102,6 @@ restart -force
 # Loading work.register_file(logic)
 # Loading work.alu_control(logic)
 # Loading work.alu_main(logic)
-run -all
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
@@ -191,17 +110,20 @@ run -all
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /toplevel_tb/TL/Data/Mem
 # Break key hit
 # Simulation stop requested.
-add wave -position 47  sim:/toplevel_tb/TL/Data/RegFile/regs(8)
-add wave -position 48  sim:/toplevel_tb/TL/Data/RegFile/regs(16)
-add wave -position 49  sim:/toplevel_tb/TL/Data/RegFile/regs(17)
-onerror {resume}
-#  Warning: onerror command for use within macro
-project compileall
+quit -sim
+# End time: 21:01:19 on Nov 30,2023, Elapsed time: 0:04:47
+# Errors: 0, Warnings: 8
 # Compile of RAM.vhd was successful.
 # Compile of reg.vhd was successful.
 # Compile of Memory.vhd was successful.
@@ -220,10 +142,21 @@ project compileall
 # Compile of Datapath.vhd was successful.
 # Compile of topLevel.vhd was successful.
 # Compile of topLevel_tb.vhd was successful.
-# 18 compiles, 0 failed with no errors.
-restart -force
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.toplevel_tb(logic)
+# Compile of decoder7seg.vhd was successful.
+# Compile of toppiestLevel.vhd was successful.
+# Compile of toppiestLevel_tb.vhd was successful.
+# 21 compiles, 0 failed with no errors.
+vsim -gui work.toppiestlevel_tb
+# vsim -gui work.toppiestlevel_tb 
+# Start time: 21:01:54 on Nov 30,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.toppiestlevel_tb(logic)
+# Loading work.toppiestlevel(logic)
 # Loading work.toplevel(logic)
 # Loading work.controller(logic)
 # Loading work.datapath(logic)
@@ -235,98 +168,67 @@ restart -force
 # Loading work.sign_extend(logic)
 # Loading work.shift_left_2(logic)
 # Loading work.concat(logic)
+# Loading altera_mf.altera_mf_components
 # Loading work.memory(logic)
 # Loading work.ram(syn)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
 # Loading work.instruction_register(logic)
 # Loading work.register_file(logic)
 # Loading work.alu_control(logic)
 # Loading work.alu_main(logic)
-# Break key hit
+# Loading work.decoder7seg(bhv)
+add wave -position end  sim:/toppiestlevel_tb/buttons
+add wave -position end  sim:/toppiestlevel_tb/clk
+add wave -position end  sim:/toppiestlevel_tb/rst
+add wave -position end  sim:/toppiestlevel_tb/SSG0
+add wave -position end  sim:/toppiestlevel_tb/SSG1
+add wave -position end  sim:/toppiestlevel_tb/SSG2
+add wave -position end  sim:/toppiestlevel_tb/switch_input
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karoawr  Hostname: U_LOST_THE_GAME  ProcessID: 14164
+#           Attempting to use alternate WLF file "./wlfthtnybw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthtnybw
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 0  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 0  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 0  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 1  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # Break key hit
-# Simulation stop requested.
-onerror {resume}
-#  Warning: onerror command for use within macro
-project compileall
-# Compile of RAM.vhd was successful.
-# Compile of reg.vhd was successful.
-# Compile of Memory.vhd was successful.
-# Compile of ALU_Main.vhd was successful.
-# Compile of ALU_Control.vhd was successful.
-# Compile of concat.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux3to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of shift_left_2.vhd was successful.
-# Compile of sign_extend.vhd was successful.
-# Compile of zero_extend.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of controller.vhd was successful.
-# Compile of Datapath.vhd failed with 1 errors.
-# Compile of topLevel.vhd was successful.
-# Compile of topLevel_tb.vhd was successful.
-# 18 compiles, 1 failed with 1 error.
-restart -force
+# Break in Process line__28 at C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd line 28
+add wave -position end  sim:/toppiestlevel_tb/TL/LEDOut
+add wave -position end  sim:/toppiestlevel_tb/TL/num0
+add wave -position end  sim:/toppiestlevel_tb/TL/num1
+add wave -position end  sim:/toppiestlevel_tb/TL/num2
+add wave -position end  sim:/toppiestlevel_tb/TL/outport
+restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.toplevel_tb(logic)
-# Loading work.toplevel(logic)
-# Loading work.controller(logic)
-# Loading work.reg(logic)
-# Loading work.mux2to1(logic)
-# Loading work.mux3to1(logic)
-# Loading work.mux4to1(logic)
-# Loading work.zero_extend(logic)
-# Loading work.sign_extend(logic)
-# Loading work.shift_left_2(logic)
-# Loading work.concat(logic)
-# Loading work.memory(logic)
-# Loading work.ram(syn)
-# Loading work.instruction_register(logic)
-# Loading work.register_file(logic)
-# Loading work.alu_control(logic)
-# Loading work.alu_main(logic)
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 0  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 0  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 0  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /toplevel_tb/TL/Data/Mem
+#    Time: 0 ps  Iteration: 1  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /toppiestlevel_tb/TL/tL/Data/Mem
 # Break key hit
 # Break in Process line__18 at C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd line 18
-# Compile of RAM.vhd was successful.
-# Compile of reg.vhd was successful.
-# Compile of Memory.vhd was successful.
-# Compile of ALU_Main.vhd was successful.
-# Compile of ALU_Control.vhd was successful.
-# Compile of concat.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux3to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of shift_left_2.vhd was successful.
-# Compile of sign_extend.vhd was successful.
-# Compile of zero_extend.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of controller.vhd was successful.
-# Compile of Datapath.vhd was successful.
-# Compile of topLevel.vhd was successful.
-# Compile of topLevel_tb.vhd was successful.
-# 18 compiles, 0 failed with no errors.

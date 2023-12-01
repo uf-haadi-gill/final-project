@@ -13,7 +13,7 @@ Ealu_control
 Z0 w1701315599
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1737
+!i122 2331
 Z3 dC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/modelSim-Project
 Z4 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd
 Z5 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd
@@ -23,9 +23,9 @@ VPfAQF3kkR:jSXO8J?=h7e3
 !s100 IGH@;dhgR=M7JgIDFT]OS0
 Z6 OV;C;2020.1;71
 32
-Z7 !s110 1701319262
+Z7 !s110 1701396099
 !i10b 1
-Z8 !s108 1701319261.000000
+Z8 !s108 1701396099.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd|
 Z10 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd|
 !i113 1
@@ -35,7 +35,7 @@ Alogic
 R1
 R2
 Z13 DEx4 work 11 alu_control 0 22 PfAQF3kkR:jSXO8J?=h7e3
-!i122 1737
+!i122 2331
 l23
 L22 122
 VK^`a^ZS`73ZeM?5PI`_861
@@ -51,13 +51,13 @@ R10
 R11
 R12
 Ealu_main
-Z14 w1701316960
+Z14 w1701394347
 Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z17 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R1
 R2
-!i122 1736
+!i122 2330
 R3
 Z18 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd
 Z19 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd
@@ -67,11 +67,11 @@ V<^i^KlQ@KJ3Hm6`NRQGT_1
 !s100 3BAM=jFdeljP:Co=Se1Dl2
 R6
 32
-Z20 !s110 1701319261
+R7
 !i10b 1
 R8
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd|
-Z22 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd|
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd|
+Z21 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd|
 !i113 1
 R11
 R12
@@ -81,42 +81,42 @@ R16
 R17
 R1
 R2
-Z23 DEx4 work 8 alu_main 0 22 <^i^KlQ@KJ3Hm6`NRQGT_1
-!i122 1736
+Z22 DEx4 work 8 alu_main 0 22 <^i^KlQ@KJ3Hm6`NRQGT_1
+!i122 2330
 l113
 L38 282
-VPL@^Qn[>4SZnQ4C;jZdSJ3
-!s100 QWn:IRfbP=fLO204MmTkL3
+VUmBSSgz^K;FO]a2L02bD10
+!s100 QJf@OC?j<3=:nW5>RIb253
 R6
 32
-R20
+R7
 !i10b 1
 R8
+R20
 R21
-R22
 !i113 1
 R11
 R12
 Econcat
-Z24 w1700538387
+Z23 w1700538387
 R15
 R1
 R2
-!i122 1738
+!i122 2332
 R3
-Z25 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd
-Z26 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd
+Z24 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd
+Z25 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd
 l0
 L5 1
 VY`j5hWRK=c];9jR41A6^X1
 !s100 n9cEkBXikRdE@M?V=oj2?3
 R6
 32
-R7
+Z26 !s110 1701396100
 !i10b 1
-Z27 !s108 1701319262.000000
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd|
-Z29 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd|
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd|
+Z28 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/concat.vhd|
 !i113 1
 R11
 R12
@@ -124,44 +124,44 @@ Alogic
 R15
 R1
 R2
-Z30 DEx4 work 6 concat 0 22 Y`j5hWRK=c];9jR41A6^X1
-!i122 1738
+Z29 DEx4 work 6 concat 0 22 Y`j5hWRK=c];9jR41A6^X1
+!i122 2332
 l14
 L13 4
 V2;Yh44mTWP3[<li6<dP_22
 !s100 FPM=dz^X5>;d0fRY?jM4;0
 R6
 32
-R7
+R26
 !i10b 1
+R8
 R27
 R28
-R29
 !i113 1
 R11
 R12
 Econtroller
-Z31 w1701316850
+Z30 w1701392652
 R16
 R17
 R15
 R1
 R2
-!i122 1747
+!i122 2341
 R3
-Z32 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd
-Z33 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd
+Z31 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd
+Z32 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd
 l0
 L6 1
 VNJ1FE4ENmF[gifm2SFJ`k3
 !s100 M_X:^YKn5R^mOO_FPdZZS2
 R6
 32
-Z34 !s110 1701319264
+Z33 !s110 1701396103
 !i10b 1
-Z35 !s108 1701319264.000000
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd|
-Z37 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd|
+Z34 !s108 1701396103.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd|
+Z36 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd|
 !i113 1
 R11
 R12
@@ -171,399 +171,140 @@ R17
 R15
 R1
 R2
-Z38 DEx4 work 10 controller 0 22 NJ1FE4ENmF[gifm2SFJ`k3
-!i122 1747
+Z37 DEx4 work 10 controller 0 22 NJ1FE4ENmF[gifm2SFJ`k3
+!i122 2341
 l45
-L33 284
-VHobShNFd9F[GmoheUJGR;1
-!s100 3]WA:BEd_<jLdcdQ@Phzj3
+L33 294
+VfG1ZIi[2F:582QUW]37^52
+!s100 ^IiPzh^;hEaSLzbaWlIY82
 R6
 32
-R34
+R33
 !i10b 1
+R34
 R35
 R36
-R37
 !i113 1
 R11
 R12
 Edatapath
-Z39 w1701319256
+Z38 w1701392873
 R1
 R2
-!i122 1748
+!i122 2342
 R3
-Z40 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd
-Z41 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd
+Z39 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd
+Z40 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd
 l0
 L5 1
 Ve]hi5FAK_[;@>E7lJiK?D1
 !s100 l;IJNeImTPEC_^K=<Q9bU3
 R6
 32
-R34
+R33
 !i10b 1
-R35
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd|
-Z43 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd|
+R34
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd|
+Z42 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd|
 !i113 1
 R11
 R12
 Alogic
-R23
+R22
 R13
-Z44 DEx4 work 13 register_file 0 22 Wk1M`;5>HaPc80_VDe5oZ0
-Z45 DEx4 work 20 instruction_register 0 22 fzl`dPT^MNJfhD^F6YgI80
+Z43 DEx4 work 13 register_file 0 22 Wk1M`;5>HaPc80_VDe5oZ0
+Z44 DEx4 work 20 instruction_register 0 22 fzl`dPT^MNJfhD^F6YgI80
 R16
 R17
-Z46 DEx4 work 6 memory 0 22 2A?DM5P8O?e6eifENE7CF1
-R30
-Z47 DEx4 work 12 shift_left_2 0 22 4C`gcFN;6YOhaE]g6V5EQ2
-Z48 DEx4 work 11 sign_extend 0 22 0coTBU4MBY4D6LUoj`hYY1
+Z45 DEx4 work 6 memory 0 22 2A?DM5P8O?e6eifENE7CF1
+R29
+Z46 DEx4 work 12 shift_left_2 0 22 4C`gcFN;6YOhaE]g6V5EQ2
+Z47 DEx4 work 11 sign_extend 0 22 0coTBU4MBY4D6LUoj`hYY1
 R15
-Z49 DEx4 work 11 zero_extend 0 22 VQUQ<`od^`FN<<gQ8[<TP3
-Z50 DEx4 work 7 mux4to1 0 22 `glDj8K^^Gb5?hR2g>Mli2
-Z51 DEx4 work 7 mux3to1 0 22 KUWaRMe57A]TVOI:9[]oY3
-Z52 DEx4 work 7 mux2to1 0 22 g?R>Kj=`_5<`?OPLkTL]B0
-Z53 DEx4 work 3 reg 0 22 io;5l_H5O6`DeN`QkH;Kg3
+Z48 DEx4 work 11 zero_extend 0 22 VQUQ<`od^`FN<<gQ8[<TP3
+Z49 DEx4 work 7 mux4to1 0 22 `glDj8K^^Gb5?hR2g>Mli2
+Z50 DEx4 work 7 mux3to1 0 22 KUWaRMe57A]TVOI:9[]oY3
+Z51 DEx4 work 7 mux2to1 0 22 g?R>Kj=`_5<`?OPLkTL]B0
+Z52 DEx4 work 3 reg 0 22 io;5l_H5O6`DeN`QkH;Kg3
 R1
 R2
-Z54 DEx4 work 8 datapath 0 22 e]hi5FAK_[;@>E7lJiK?D1
-!i122 1748
-l89
-L41 315
-VOA^znX4V2MMM0Oz@OD5Q`1
-!s100 5>DJShV>DbNWfDXjBIJ053
+Z53 DEx4 work 8 datapath 0 22 e]hi5FAK_[;@>E7lJiK?D1
+!i122 2342
+l91
+L41 327
+VTBkZ?o=R?S9[C5Rg[DbeJ1
+!s100 a2[Y7UzEl3DVdfiX9m74H3
 R6
 32
-R34
+R33
 !i10b 1
-R35
+R34
+R41
 R42
-R43
+!i113 1
+R11
+R12
+Edecoder7seg
+Z54 w1696970186
+R1
+R2
+!i122 2345
+R3
+Z55 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/decoder7seg.vhd
+Z56 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/decoder7seg.vhd
+l0
+L4 1
+Vaa_CODQjS^EP5;iFIzZ]33
+!s100 YcZUZ_i53Uj77:lcLc?>N0
+R6
+32
+Z57 !s110 1701396104
+!i10b 1
+Z58 !s108 1701396104.000000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/decoder7seg.vhd|
+Z60 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/decoder7seg.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+Z61 DEx4 work 11 decoder7seg 0 22 aa_CODQjS^EP5;iFIzZ]33
+!i122 2345
+l12
+L10 30
+VGG>2LeO]dZaI8HlW045ke0
+!s100 D9HcZa=RkE=[QF20[9Q`33
+R6
+32
+R57
+!i10b 1
+R58
+R59
+R60
 !i113 1
 R11
 R12
 Einstruction_register
-Z55 w1701294568
+Z62 w1701294568
 R15
 R1
 R2
-!i122 1745
+!i122 2339
 R3
-Z56 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd
-Z57 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd
+Z63 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd
+Z64 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd
 l0
 L5 1
 Vfzl`dPT^MNJfhD^F6YgI80
 !s100 9PNFnb^GLFTASKUcn0?X81
 R6
 32
-Z58 !s110 1701319263
+Z65 !s110 1701396102
 !i10b 1
-Z59 !s108 1701319263.000000
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd|
-Z61 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd|
-!i113 1
-R11
-R12
-Alogic
-R15
-R1
-R2
-R45
-!i122 1745
-l21
-L19 22
-V91UWP1L;Z?H4a6AjCanaJ2
-!s100 9TI_7C1GgH^i4PNXg[UWL2
-R6
-32
-R58
-!i10b 1
-R59
-R60
-R61
-!i113 1
-R11
-R12
-Ememory
-Z62 w1701301235
-R16
-R17
-R15
-R1
-R2
-!i122 1735
-R3
-Z63 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
-Z64 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
-l0
-L18 1
-V2A?DM5P8O?e6eifENE7CF1
-!s100 @AoBjY0NY84=?l[]<kTzN2
-R6
-32
-R20
-!i10b 1
-R8
-Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd|
-Z66 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd|
-!i113 1
-R11
-R12
-Alogic
-R53
-Z67 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
-Z68 DEx4 work 3 ram 0 22 Od8eO=0oXzW=6TjOUAfMI1
-R16
-R17
-R15
-R1
-R2
-R46
-!i122 1735
-l36
-L26 103
-VK>B6X7TWc<j;zho`ILn=>3
-!s100 _XI^9kSZ42;o[m8Y`fz4f3
-R6
-32
-R20
-!i10b 1
-R8
-R65
-R66
-!i113 1
-R11
-R12
-Emux2to1
-Z69 w1700538379
-R1
-R2
-!i122 1739
-R3
-Z70 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd
-Z71 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd
-l0
-L5 1
-Vg?R>Kj=`_5<`?OPLkTL]B0
-!s100 d1T]4YmO<cMAOIG=Qha2z0
-R6
-32
-R7
-!i10b 1
-R27
-Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd|
-Z73 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd|
-!i113 1
-R11
-R12
-Alogic
-R1
-R2
-R52
-!i122 1739
-l19
-L18 4
-VeD_TOd4I;;jN`GBYDa1TP1
-!s100 jGE^EE5dkMY_K3W6T0;5B0
-R6
-32
-R7
-!i10b 1
-R27
-R72
-R73
-!i113 1
-R11
-R12
-Emux3to1
-Z74 w1700538504
-R1
-R2
-!i122 1740
-R3
-Z75 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd
-Z76 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd
-l0
-L5 1
-VKUWaRMe57A]TVOI:9[]oY3
-!s100 RBgf=doT39lI_2=lgPz3o1
-R6
-32
-R7
-!i10b 1
-R27
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd|
-Z78 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd|
-!i113 1
-R11
-R12
-Alogic
-R1
-R2
-R51
-!i122 1740
-l20
-L19 6
-Vk3SJFQ<o4NJRlPdZXV51l0
-!s100 FSF>3Y3TmAJXChR`PmVD?0
-R6
-32
-R7
-!i10b 1
-R27
-R77
-R78
-!i113 1
-R11
-R12
-Emux4to1
-Z79 w1700538373
-R1
-R2
-!i122 1741
-R3
-Z80 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd
-Z81 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd
-l0
-L5 1
-V`glDj8K^^Gb5?hR2g>Mli2
-!s100 ^Wa=8`2eM<dLa7C^eS_CZ2
-R6
-32
-R7
-!i10b 1
-R27
-Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd|
-Z83 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd|
-!i113 1
-R11
-R12
-Alogic
-R1
-R2
-R50
-!i122 1741
-l21
-L20 7
-V?_]2?7eozFLLa_JKYO;F>0
-!s100 @YaEEbF8celza_k:40]6P2
-R6
-32
-R7
-!i10b 1
-R27
-R82
-R83
-!i113 1
-R11
-R12
-Eram
-Z84 w1701288575
-R67
-R1
-R2
-!i122 1733
-R3
-Z85 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd
-Z86 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd
-l0
-L43 1
-VOd8eO=0oXzW=6TjOUAfMI1
-!s100 nU?gh;DOVYMF8Fz_olcz40
-R6
-32
-R20
-!i10b 1
-Z87 !s108 1701319260.000000
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd|
-Z89 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd|
-!i113 1
-R11
-R12
-Asyn
-R67
-R1
-R2
-R68
-!i122 1733
-l59
-L55 36
-VLoAQ`9^3BC_X5JU5coLz80
-!s100 ;6eG<JD;oH;f>eQ4kglMS3
-R6
-32
-R20
-!i10b 1
-R87
-R88
-R89
-!i113 1
-R11
-R12
-Ereg
-Z90 w1700264994
-R1
-R2
-!i122 1734
-R3
-Z91 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd
-Z92 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd
-l0
-L4 1
-Vio;5l_H5O6`DeN`QkH;Kg3
-!s100 BIamNIYz5M:Y2[X_6E_kZ2
-R6
-32
-R20
-!i10b 1
-R8
-Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd|
-Z94 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd|
-!i113 1
-R11
-R12
-Alogic
-R1
-R2
-R53
-!i122 1734
-l17
-L16 11
-Vo<WG^4`_V]G=hm5;RTbjA1
-!s100 DGH`FBI_g4Go<Rb_II3JC1
-R6
-32
-R20
-!i10b 1
-R8
-R93
-R94
-!i113 1
-R11
-R12
-Eregister_file
-Z95 w1700288164
-R15
-R1
-R2
-!i122 1746
-R3
-Z96 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd
-Z97 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd
-l0
-L5 1
-VWk1M`;5>HaPc80_VDe5oZ0
-!s100 BHM[EPI]n0K?1IGj^P8Md0
-R6
-32
-R34
-!i10b 1
-R59
-Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd|
-Z99 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd|
+Z66 !s108 1701396102.000000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd|
+Z68 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd|
 !i113 1
 R11
 R12
@@ -572,41 +313,384 @@ R15
 R1
 R2
 R44
-!i122 1746
+!i122 2339
+l21
+L19 22
+V91UWP1L;Z?H4a6AjCanaJ2
+!s100 9TI_7C1GgH^i4PNXg[UWL2
+R6
+32
+R65
+!i10b 1
+R66
+R67
+R68
+!i113 1
+R11
+R12
+Ememory
+Z69 w1701395477
+R16
+R17
+R15
+R1
+R2
+!i122 2329
+R3
+Z70 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
+Z71 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd
+l0
+L18 1
+V2A?DM5P8O?e6eifENE7CF1
+!s100 @AoBjY0NY84=?l[]<kTzN2
+R6
+32
+R7
+!i10b 1
+Z72 !s108 1701396098.000000
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd|
+Z74 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd|
+!i113 1
+R11
+R12
+Alogic
+R52
+Z75 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+Z76 DEx4 work 3 ram 0 22 Od8eO=0oXzW=6TjOUAfMI1
+R16
+R17
+R15
+R1
+R2
+R45
+!i122 2329
+l36
+L26 111
+VIQLYR@?1B0UkemcOTb=ZY1
+!s100 VD1@_;;eZJd[lOG5IzLlP2
+R6
+32
+R7
+!i10b 1
+R72
+R73
+R74
+!i113 1
+R11
+R12
+Emux2to1
+Z77 w1700538379
+R1
+R2
+!i122 2333
+R3
+Z78 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd
+Z79 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd
+l0
+L5 1
+Vg?R>Kj=`_5<`?OPLkTL]B0
+!s100 d1T]4YmO<cMAOIG=Qha2z0
+R6
+32
+Z80 !s110 1701396101
+!i10b 1
+Z81 !s108 1701396100.000000
+Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd|
+Z83 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux2to1.vhd|
+!i113 1
+R11
+R12
+Alogic
+R1
+R2
+R51
+!i122 2333
+l19
+L18 4
+VeD_TOd4I;;jN`GBYDa1TP1
+!s100 jGE^EE5dkMY_K3W6T0;5B0
+R6
+32
+R80
+!i10b 1
+R81
+R82
+R83
+!i113 1
+R11
+R12
+Emux3to1
+Z84 w1700538504
+R1
+R2
+!i122 2334
+R3
+Z85 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd
+Z86 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd
+l0
+L5 1
+VKUWaRMe57A]TVOI:9[]oY3
+!s100 RBgf=doT39lI_2=lgPz3o1
+R6
+32
+R80
+!i10b 1
+Z87 !s108 1701396101.000000
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd|
+Z89 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux3to1.vhd|
+!i113 1
+R11
+R12
+Alogic
+R1
+R2
+R50
+!i122 2334
+l20
+L19 6
+Vk3SJFQ<o4NJRlPdZXV51l0
+!s100 FSF>3Y3TmAJXChR`PmVD?0
+R6
+32
+R80
+!i10b 1
+R87
+R88
+R89
+!i113 1
+R11
+R12
+Emux4to1
+Z90 w1700538373
+R1
+R2
+!i122 2335
+R3
+Z91 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd
+Z92 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd
+l0
+L5 1
+V`glDj8K^^Gb5?hR2g>Mli2
+!s100 ^Wa=8`2eM<dLa7C^eS_CZ2
+R6
+32
+R80
+!i10b 1
+R87
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd|
+Z94 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd|
+!i113 1
+R11
+R12
+Alogic
+R1
+R2
+R49
+!i122 2335
+l21
+L20 7
+V?_]2?7eozFLLa_JKYO;F>0
+!s100 @YaEEbF8celza_k:40]6P2
+R6
+32
+R80
+!i10b 1
+R87
+R93
+R94
+!i113 1
+R11
+R12
+Eram
+Z95 w1701288575
+R75
+R1
+R2
+!i122 2327
+R3
+Z96 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd
+Z97 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd
+l0
+L43 1
+VOd8eO=0oXzW=6TjOUAfMI1
+!s100 nU?gh;DOVYMF8Fz_olcz40
+R6
+32
+Z98 !s110 1701396098
+!i10b 1
+R72
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd|
+Z100 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/QProject/RAM.vhd|
+!i113 1
+R11
+R12
+Asyn
+R75
+R1
+R2
+R76
+!i122 2327
+l59
+L55 36
+VLoAQ`9^3BC_X5JU5coLz80
+!s100 ;6eG<JD;oH;f>eQ4kglMS3
+R6
+32
+R98
+!i10b 1
+R72
+R99
+R100
+!i113 1
+R11
+R12
+Ereg
+Z101 w1700264994
+R1
+R2
+!i122 2328
+R3
+Z102 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd
+Z103 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd
+l0
+L4 1
+Vio;5l_H5O6`DeN`QkH;Kg3
+!s100 BIamNIYz5M:Y2[X_6E_kZ2
+R6
+32
+R98
+!i10b 1
+R72
+Z104 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd|
+Z105 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/reg.vhd|
+!i113 1
+R11
+R12
+Alogic
+R1
+R2
+R52
+!i122 2328
+l17
+L16 11
+Vo<WG^4`_V]G=hm5;RTbjA1
+!s100 DGH`FBI_g4Go<Rb_II3JC1
+R6
+32
+R98
+!i10b 1
+R72
+R104
+R105
+!i113 1
+R11
+R12
+Eregister_file
+Z106 w1700288164
+R15
+R1
+R2
+!i122 2340
+R3
+Z107 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd
+Z108 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd
+l0
+L5 1
+VWk1M`;5>HaPc80_VDe5oZ0
+!s100 BHM[EPI]n0K?1IGj^P8Md0
+R6
+32
+R33
+!i10b 1
+R66
+Z109 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd|
+Z110 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Register File/register_file.vhd|
+!i113 1
+R11
+R12
+Alogic
+R15
+R1
+R2
+R43
+!i122 2340
 l27
 L24 23
 V]X=NP<Kh89d>bYf5FWTgZ1
 !s100 0zUAERliC3??FHkQoJQWc1
 R6
 32
-R34
+R33
 !i10b 1
-R59
-R98
-R99
+R66
+R109
+R110
 !i113 1
 R11
 R12
 Eshift_left_2
-Z100 w1701287250
+Z111 w1701287250
 R15
 R1
 R2
-!i122 1742
+!i122 2336
 R3
-Z101 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd
-Z102 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd
+Z112 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd
+Z113 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd
 l0
 L5 1
 V4C`gcFN;6YOhaE]g6V5EQ2
 !s100 lGc`>aY3[Q6YfDDf9zTOP1
 R6
 32
-R58
+R80
 !i10b 1
-R59
-Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd|
-Z104 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd|
+R87
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd|
+Z115 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/shift_left_2.vhd|
+!i113 1
+R11
+R12
+Alogic
+R15
+R1
+R2
+R46
+!i122 2336
+l16
+L15 4
+V]:0KWcejIdoPb7b7J8LXc3
+!s100 neUAV;2jMcj1eVI8UnNi>0
+R6
+32
+R80
+!i10b 1
+R87
+R114
+R115
+!i113 1
+R11
+R12
+Esign_extend
+Z116 w1701210340
+R15
+R1
+R2
+!i122 2337
+R3
+Z117 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd
+Z118 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd
+l0
+L5 1
+V0coTBU4MBY4D6LUoj`hYY1
+!s100 ]W[=]m4aN5OKmcPTZdj<n0
+R6
+32
+R65
+!i10b 1
+R87
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd|
+Z120 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd|
 !i113 1
 R11
 R12
@@ -615,41 +699,235 @@ R15
 R1
 R2
 R47
-!i122 1742
-l16
-L15 4
-V]:0KWcejIdoPb7b7J8LXc3
-!s100 neUAV;2jMcj1eVI8UnNi>0
+!i122 2337
+l14
+L13 5
+VziRm7g;5k5:O3[NR>nji<1
+!s100 1@CnmSTS;e;SM`dHoGB7i2
 R6
 32
-R58
+R65
 !i10b 1
-R59
-R103
-R104
+R87
+R119
+R120
 !i113 1
 R11
 R12
-Esign_extend
-Z105 w1701210340
+Etoplevel
+Z121 w1701285994
+R16
+R17
 R15
 R1
 R2
-!i122 1743
+!i122 2343
 R3
-Z106 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd
-Z107 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd
+Z122 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd
+Z123 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd
 l0
-L5 1
-V0coTBU4MBY4D6LUoj`hYY1
-!s100 ]W[=]m4aN5OKmcPTZdj<n0
+L6 1
+VMV=38LHTW1:ZBjjN0=US>3
+!s100 8WDKJ1ngVV:7d7JlcAmG?1
 R6
 32
-R58
+R33
 !i10b 1
-R59
-Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd|
-Z109 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd|
+R34
+Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd|
+Z125 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd|
+!i113 1
+R11
+R12
+Alogic
+R53
+R37
+R16
+R17
+R15
+R1
+R2
+Z126 DEx4 work 8 toplevel 0 22 MV=38LHTW1:ZBjjN0=US>3
+!i122 2343
+l18
+L14 55
+V^jE]7Yi<NC`MzAk>T>B7h3
+!s100 ;[N=gk839ZDe>ZD9A@]FO3
+R6
+32
+R33
+!i10b 1
+R34
+R124
+R125
+!i113 1
+R11
+R12
+Etoplevel_tb
+Z127 w1701391418
+R16
+R17
+R15
+R1
+R2
+!i122 2344
+R3
+Z128 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd
+Z129 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd
+l0
+L6 1
+VBFHaT2Nne;CB]Zn5J_oXh3
+!s100 E<O10BUckIaQQSV2YV:Xo0
+R6
+32
+R57
+!i10b 1
+R34
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd|
+Z131 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd|
+!i113 1
+R11
+R12
+Alogic
+R126
+R16
+R17
+R15
+R1
+R2
+DEx4 work 11 toplevel_tb 0 22 BFHaT2Nne;CB]Zn5J_oXh3
+!i122 2344
+l24
+L8 90
+V_i5c?dc4lUmNUQU2P35li2
+!s100 EAQgUe3BJXfbheKBA3nh>0
+R6
+32
+R57
+!i10b 1
+R34
+R130
+R131
+!i113 1
+R11
+R12
+Etoppiestlevel
+Z132 w1701391009
+R16
+R17
+R15
+R1
+R2
+!i122 2346
+R3
+Z133 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel.vhd
+Z134 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel.vhd
+l0
+L6 1
+V>6]7c=Sdnj?dkC:gEFX1@3
+!s100 QJ6PbFL8o3CTFY;`NnbBD2
+R6
+32
+R57
+!i10b 1
+R58
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel.vhd|
+Z136 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel.vhd|
+!i113 1
+R11
+R12
+Alogic
+R61
+R126
+R16
+R17
+R15
+R1
+R2
+Z137 DEx4 work 13 toppiestlevel 0 22 >6]7c=Sdnj?dkC:gEFX1@3
+!i122 2346
+l18
+L14 39
+VWfkDz5Mh^mYHgk;XcFRFD1
+!s100 5GCbWI<gcV<oCAX;z9;KN1
+R6
+32
+R57
+!i10b 1
+R58
+R135
+R136
+!i113 1
+R11
+R12
+Etoppiestlevel_tb
+Z138 w1701396070
+R16
+R17
+R15
+R1
+R2
+!i122 2347
+R3
+Z139 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd
+Z140 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd
+l0
+L6 1
+VBJLPR@d=6L1Hk9G[k[i]n0
+!s100 XXFi10>2]O4ERckL^N6J40
+R6
+32
+Z141 !s110 1701396105
+!i10b 1
+R58
+Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd|
+!s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd|
+!i113 1
+R11
+R12
+Alogic
+R137
+R16
+R17
+R15
+R1
+R2
+DEx4 work 16 toppiestlevel_tb 0 22 BJLPR@d=6L1Hk9G[k[i]n0
+!i122 2347
+l25
+L8 93
+V?zD:M`QDfTBDV;U7ig5^I3
+!s100 ?7N14F1C@d_jU39<>KSeC2
+R6
+32
+R141
+!i10b 1
+R58
+R142
+Z143 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd|
+!i113 1
+R11
+R12
+Ezero_extend
+Z144 w1700289035
+R15
+R1
+R2
+!i122 2338
+R3
+Z145 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd
+Z146 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd
+l0
+L5 1
+VVQUQ<`od^`FN<<gQ8[<TP3
+!s100 `HlQ4hGk2XS[H`;aU0:LH2
+R6
+32
+R65
+!i10b 1
+R66
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd|
+Z148 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd|
 !i113 1
 R11
 R12
@@ -658,158 +936,18 @@ R15
 R1
 R2
 R48
-!i122 1743
-l14
-L13 5
-VziRm7g;5k5:O3[NR>nji<1
-!s100 1@CnmSTS;e;SM`dHoGB7i2
-R6
-32
-R58
-!i10b 1
-R59
-R108
-R109
-!i113 1
-R11
-R12
-Etoplevel
-Z110 w1701285994
-R16
-R17
-R15
-R1
-R2
-!i122 1749
-R3
-Z111 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd
-Z112 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd
-l0
-L6 1
-VMV=38LHTW1:ZBjjN0=US>3
-!s100 8WDKJ1ngVV:7d7JlcAmG?1
-R6
-32
-R34
-!i10b 1
-R35
-Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd|
-Z114 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd|
-!i113 1
-R11
-R12
-Alogic
-R54
-R38
-R16
-R17
-R15
-R1
-R2
-Z115 DEx4 work 8 toplevel 0 22 MV=38LHTW1:ZBjjN0=US>3
-!i122 1749
-l18
-L14 55
-V^jE]7Yi<NC`MzAk>T>B7h3
-!s100 ;[N=gk839ZDe>ZD9A@]FO3
-R6
-32
-R34
-!i10b 1
-R35
-R113
-R114
-!i113 1
-R11
-R12
-Etoplevel_tb
-Z116 w1701313072
-R16
-R17
-R15
-R1
-R2
-!i122 1750
-R3
-Z117 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd
-Z118 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd
-l0
-L6 1
-VBFHaT2Nne;CB]Zn5J_oXh3
-!s100 E<O10BUckIaQQSV2YV:Xo0
-R6
-32
-Z119 !s110 1701319265
-!i10b 1
-R35
-Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd|
-Z121 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel_tb.vhd|
-!i113 1
-R11
-R12
-Alogic
-R115
-R16
-R17
-R15
-R1
-R2
-Z122 DEx4 work 11 toplevel_tb 0 22 BFHaT2Nne;CB]Zn5J_oXh3
-!i122 1750
-l24
-Z123 L8 90
-Z124 Vb0CV?F;oGLe6Z6eXY?zJH3
-Z125 !s100 >Sg2KXlJ?<BY2bOcfl?@S3
-R6
-32
-R119
-!i10b 1
-R35
-R120
-R121
-!i113 1
-R11
-R12
-Ezero_extend
-Z126 w1700289035
-R15
-R1
-R2
-!i122 1744
-R3
-Z127 8C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd
-Z128 FC:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd
-l0
-L5 1
-VVQUQ<`od^`FN<<gQ8[<TP3
-!s100 `HlQ4hGk2XS[H`;aU0:LH2
-R6
-32
-R58
-!i10b 1
-R59
-Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd|
-Z130 !s107 C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/zero_extend.vhd|
-!i113 1
-R11
-R12
-Alogic
-R15
-R1
-R2
-R49
-!i122 1744
+!i122 2338
 l14
 L12 5
 VE34halO9>XWISi@Pd<02>3
 !s100 PDX^FL<;d<Pm?DX[ZAXd53
 R6
 32
-R58
+R65
 !i10b 1
-R59
-R129
-R130
+R66
+R147
+R148
 !i113 1
 R11
 R12

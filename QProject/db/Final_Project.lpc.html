@@ -16,7 +16,55 @@
 <TH>Output only Bidir</TH>
 </TR>
 <TR >
-<TD >Data|ALU</TD>
+<TD >dC2</TD>
+<TD >4</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >7</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >dC1</TD>
+<TD >4</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >7</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >dC0</TD>
+<TD >4</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >7</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >tL|Data|ALU</TD>
 <TD >74</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -32,7 +80,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|ALUCtrl</TD>
+<TD >tL|Data|ALUCtrl</TD>
 <TD >14</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -48,7 +96,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegFile</TD>
+<TD >tL|Data|RegFile</TD>
 <TD >83</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -64,8 +112,8 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|InstReg</TD>
-<TD >34</TD>
+<TD >tL|Data|InstReg</TD>
+<TD >35</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -80,15 +128,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|Mem|OutputPort</TD>
+<TD >tL|Data|Mem|BaddrDelay</TD>
 <TD >35</TD>
+<TD >1</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >1</TD>
 <TD >32</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -96,15 +144,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|Mem|InputPort1</TD>
+<TD >tL|Data|Mem|OutputPort</TD>
 <TD >35</TD>
+<TD >1</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >1</TD>
 <TD >32</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -112,15 +160,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|Mem|InputPort0</TD>
+<TD >tL|Data|Mem|InputPort1</TD>
 <TD >35</TD>
+<TD >1</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >1</TD>
 <TD >32</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -128,7 +176,23 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|Mem|Storage|altsyncram_component|auto_generated</TD>
+<TD >tL|Data|Mem|InputPort0</TD>
+<TD >35</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >32</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >tL|Data|Mem|Storage|altsyncram_component|auto_generated</TD>
 <TD >42</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -144,7 +208,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|Mem|Storage</TD>
+<TD >tL|Data|Mem|Storage</TD>
 <TD >42</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -160,7 +224,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|Mem</TD>
+<TD >tL|Data|Mem</TD>
 <TD >134</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -176,7 +240,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|PCConcat</TD>
+<TD >tL|Data|PCConcat</TD>
 <TD >32</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -192,7 +256,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|ShiftLeftPCMux</TD>
+<TD >tL|Data|ShiftLeftPCMux</TD>
 <TD >28</TD>
 <TD >4</TD>
 <TD >0</TD>
@@ -208,7 +272,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|ShiftLeftBMux</TD>
+<TD >tL|Data|ShiftLeftBMux</TD>
 <TD >32</TD>
 <TD >2</TD>
 <TD >2</TD>
@@ -224,7 +288,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|SignExtend</TD>
+<TD >tL|Data|SignExtend</TD>
 <TD >17</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -240,7 +304,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|ZeroExtend</TD>
+<TD >tL|Data|ZeroExtend</TD>
 <TD >10</TD>
 <TD >22</TD>
 <TD >0</TD>
@@ -256,7 +320,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegBMux</TD>
+<TD >tL|Data|RegBMux</TD>
 <TD >130</TD>
 <TD >32</TD>
 <TD >0</TD>
@@ -272,7 +336,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|ALUMux</TD>
+<TD >tL|Data|ALUMux</TD>
 <TD >98</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -288,7 +352,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|PCSourceMux</TD>
+<TD >tL|Data|PCSourceMux</TD>
 <TD >98</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -304,7 +368,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegAMux</TD>
+<TD >tL|Data|RegAMux</TD>
 <TD >65</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -320,7 +384,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|MemtoRegMux</TD>
+<TD >tL|Data|MemtoRegMux</TD>
 <TD >65</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -336,7 +400,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegDstMux</TD>
+<TD >tL|Data|RegDstMux</TD>
 <TD >11</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -352,7 +416,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|CodeMux</TD>
+<TD >tL|Data|CodeMux</TD>
 <TD >65</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -368,7 +432,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegHigh</TD>
+<TD >tL|Data|RegHigh</TD>
 <TD >35</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -384,7 +448,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegLow</TD>
+<TD >tL|Data|RegLow</TD>
 <TD >35</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -400,7 +464,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|ALUOut</TD>
+<TD >tL|Data|ScuffedOut</TD>
 <TD >35</TD>
 <TD >1</TD>
 <TD >0</TD>
@@ -416,7 +480,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegB</TD>
+<TD >tL|Data|ALUOut</TD>
 <TD >35</TD>
 <TD >1</TD>
 <TD >0</TD>
@@ -432,7 +496,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|RegA</TD>
+<TD >tL|Data|RegB</TD>
 <TD >35</TD>
 <TD >1</TD>
 <TD >0</TD>
@@ -448,7 +512,23 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|MemDataReg</TD>
+<TD >tL|Data|RegA</TD>
+<TD >35</TD>
+<TD >33</TD>
+<TD >0</TD>
+<TD >33</TD>
+<TD >32</TD>
+<TD >33</TD>
+<TD >33</TD>
+<TD >33</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >tL|Data|MemDataReg</TD>
 <TD >35</TD>
 <TD >1</TD>
 <TD >0</TD>
@@ -464,7 +544,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data|PCReg</TD>
+<TD >tL|Data|PCReg</TD>
 <TD >35</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -480,10 +560,10 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Data</TD>
+<TD >tL|Data</TD>
 <TD >32</TD>
 <TD >0</TD>
-<TD >1</TD>
+<TD >0</TD>
 <TD >0</TD>
 <TD >38</TD>
 <TD >0</TD>
@@ -496,7 +576,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >Control</TD>
+<TD >tL|Control</TD>
 <TD >8</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -505,6 +585,22 @@
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >tL</TD>
+<TD >14</TD>
+<TD >20</TD>
+<TD >0</TD>
+<TD >20</TD>
+<TD >32</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>

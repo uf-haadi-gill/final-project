@@ -86,6 +86,8 @@ architecture logic of datapath is
 
     signal PCEnable : std_logic;
 
+    signal scuffedReg : std_logic_vector(31 downto 0);
+
 begin
 
     PCEnable <= PCWrite or (BranchTaken and PCWriteCond);
@@ -145,6 +147,16 @@ begin
         output => RegOut_to_ALUMux
     );
 
+    
+    ScuffedOut : entity work.reg
+    port map(
+        input  => RegOut_to_ALUMux,
+        clk    => clk,
+        rst    => rst,
+        enable => '1',
+        output => scuffedReg
+    );
+
     RegLow : entity work.reg
     port map(
         input  => ResultLow_to_RegLow,
@@ -201,7 +213,7 @@ begin
     RegAMux : entity work.mux2to1
     port map(
         input1 => PCReg_to_CodeMux,
-        input2 => RegA_to_AMux,
+        input2 => Data1_to_RegA,--RegA_to_AMux,
         sel    => ALUSrcA,
         output => AMux_to_ALUMain
     );
@@ -211,7 +223,7 @@ begin
     PCSourceMux : entity work.mux3to1
     port map(
         input1 => ResultLow_to_RegLow,
-        input2 => RegOut_to_ALUMux,--ALUOut_to_CodeMux,
+        input2 => scuffedReg, --RegOut_to_ALUMux,--ALUOut_to_CodeMux,
         input3 => Concat_to_PCMux,
         sel    => PCSource,
         output => PCMux_to_PCReg
@@ -230,7 +242,7 @@ begin
     ------------------------ 4 to 1 ---------------------------
     RegBMux : entity work.mux4to1
     port map(
-        input1 => RegB_to_BMux,
+        input1 => Data2_to_RegB,--RegB_to_BMux,
         input2 => x"00000004",
         input3 => SignEx_to_ShiftLeft,
         input4 => ShiftLeft_to_BMux,

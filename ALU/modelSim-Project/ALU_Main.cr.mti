@@ -1,4 +1,12 @@
-{C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd}
+{C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/decoder7seg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/decoder7seg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder7seg
+-- Compiling architecture BHV of decoder7seg
+
+} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU_Control/ALU_Control.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -23,7 +31,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity mux3to1
 -- Compiling architecture logic of mux3to1
 
-} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/TopLevel/topLevel.vhd}
+} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ToppiestLevel/toppiestLevel_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -31,10 +39,9 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity topLevel
--- Compiling architecture logic of topLevel
--- Loading entity controller
--- Loading entity datapath
+-- Compiling entity toppiestLevel_tb
+-- Compiling architecture logic of toppiestLevel_tb
+-- Loading entity toppiestLevel
 
 } {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/ALU/ALU_Main.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -103,6 +110,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity mux2to1
 -- Compiling architecture logic of mux2to1
 
+} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture logic of mux4to1
+
 } {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Instruction Register/instruction_register.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -112,13 +127,29 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity instruction_register
 -- Compiling architecture logic of instruction_register
 
-} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/mux4to1.vhd}
+} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Datapath/Datapath.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity mux4to1
--- Compiling architecture logic of mux4to1
+-- Compiling entity datapath
+-- Compiling architecture logic of datapath
+-- Loading entity reg
+-- Loading entity mux2to1
+-- Loading entity mux3to1
+-- Loading entity mux4to1
+-- Loading package NUMERIC_STD
+-- Loading entity zero_extend
+-- Loading entity sign_extend
+-- Loading entity shift_left_2
+-- Loading entity concat
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity Memory
+-- Loading entity instruction_register
+-- Loading entity register_file
+-- Loading entity ALU_Control
+-- Loading entity ALU_Main
 
 } {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Controller/controller.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -138,20 +169,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_1164
 -- Compiling entity reg
 -- Compiling architecture logic of reg
-
-} {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Memory/Memory.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity Memory
--- Compiling architecture logic of Memory
--- Loading package altera_mf_components
--- Loading entity RAM
--- Loading entity reg
 
 } {} {}} {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/quinc/Documents/UF_FALL_2023/EEL4712C-Digital_Design/final project/Generic Components/sign_extend.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020

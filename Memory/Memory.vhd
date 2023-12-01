@@ -25,12 +25,12 @@ end Memory;
 
 architecture logic of Memory is 
 
-    signal SIG_data_out   : std_logic_vector(31 downto 0) := (others => '0');
-    signal SIG_ram_out    : std_logic_vector(31 downto 0) := (others => '0');
-    signal SIG_inPort_0   : std_logic_vector(31 downto 0) := (others => '0');
-    signal SIG_inPort_1   : std_logic_vector(31 downto 0) := (others => '0');
-      signal SIG_outPort_en : std_logic := '0';
-    signal SIG_ram_en     : std_logic := '0';
+    signal SIG_data_out   : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal SIG_ram_out    : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal SIG_inPort_0   : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal SIG_inPort_1   : std_logic_vector(31 downto 0);-- := (others => '0');
+    signal SIG_outPort_en : std_logic;-- := '0';
+    signal SIG_ram_en     : std_logic;-- := '0';
     signal SIG_baddr_delay : std_logic_vector(31 downto 0);
 
 begin
@@ -48,7 +48,7 @@ begin
     port map(
         input => InPort0_in,
         clk => clk,
-        rst => rst,
+        rst => '0',
         enable => InPort0_en,
         output => SIG_inPort_0
     );
@@ -58,7 +58,7 @@ begin
     port map(
         input => InPort1_in,
         clk => clk,
-        rst => rst,
+        rst => '0',
         enable => InPort1_en,
         output => SIG_inPort_1
     );
@@ -68,7 +68,7 @@ begin
     port map(
         input => dataIn,
         clk => clk,
-        rst => rst,
+        rst => '0',
         enable => SIG_outPort_en,
         output => OutPort
     );
@@ -87,6 +87,8 @@ begin
 
     process( baddr, dataIn, memRead, memWrite, SIG_ram_out)--, rst)
     begin 
+
+            dataOut <= (others => '0');
         -- if (rst = '1') then
         --     SIG_data_out <= (others => '0');
         --     SIG_outPort_en <= '0';
@@ -99,30 +101,36 @@ begin
 
             -- check if one of the three ports 
             if (SIG_baddr_delay = x"0000FFF8") then
-                SIG_data_out <= SIG_inPort_0;
+                dataOut <= SIG_inPort_0;
 
-            elsif (SIG_baddr_delay = x"0000FFFC") then 
-                -- check if outport or inport 1
-                if (memWrite = '1') then
-                    SIG_outPort_en <= '1';
-                elsif (memRead = '1') then
-                    SIG_data_out <= SIG_inPort_1;
-                end if;
-            -- if none of the other cases, then update ram signals
+            elsif (SIG_baddr_delay = x"0000FFFC" and memRead = '1') then
+                dataOut <= SIG_inPort_1;
+                
+            elsif (baddr = x"0000FFFC" and memWrite = '1') then 
+                SIG_outPort_en <= '1';
+
+            
+            --     -- check if outport or inport 1
+            --     if (memWrite = '1') then
+            --         SIG_outPort_en <= '1';
+            --     elsif (memRead = '1') then
+            --         SIG_data_out <= SIG_inPort_1;
+            --     end if;
+            -- -- if none of the other cases, then update ram signals
             else  
                 -------------------------------------------------------
                 --
                 --          Line below might cause delay....
                 -- 
                 --------------------------------------------------------
-                SIG_data_out <= SIG_ram_out;
+                dataOut <= SIG_ram_out;
                 SIG_ram_en <= memWrite;
             end if;
         
         -- end if;
     end process;
     
-    dataOut <= SIG_data_out;
+    -- dataOut <= SIG_data_out;
             
 
 end logic;

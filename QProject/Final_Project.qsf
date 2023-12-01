@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY topLevel
+set_global_assignment -name TOP_LEVEL_ENTITY toppiestLevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:12:22  NOVEMBER 17, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -56,9 +56,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE ../ToppiestLevel/toppiestLevel.vhd
+set_global_assignment -name VHDL_FILE ../ToppiestLevel/decoder7seg.vhd
 set_global_assignment -name VHDL_FILE ../TopLevel/topLevel_tb.vhd
 set_global_assignment -name VHDL_FILE ../TopLevel/topLevel.vhd
 set_global_assignment -name VHDL_FILE "../Register File/register_file.vhd"
@@ -77,4 +76,51 @@ set_global_assignment -name VHDL_FILE ../Controller/controller.vhd
 set_global_assignment -name VHDL_FILE ../ALU_Control/ALU_Control.vhd
 set_global_assignment -name VHDL_FILE ../ALU/ALU_Main.vhd
 set_global_assignment -name QIP_FILE RAM.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_OCT_DONE ON
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_C14 -to SSG0[0]
+set_location_assignment PIN_E15 -to SSG0[1]
+set_location_assignment PIN_C15 -to SSG0[2]
+set_location_assignment PIN_C16 -to SSG0[3]
+set_location_assignment PIN_E16 -to SSG0[4]
+set_location_assignment PIN_D17 -to SSG0[5]
+set_location_assignment PIN_C17 -to SSG0[6]
+set_location_assignment PIN_C18 -to SSG1[0]
+set_location_assignment PIN_D18 -to SSG1[1]
+set_location_assignment PIN_E18 -to SSG1[2]
+set_location_assignment PIN_B16 -to SSG1[3]
+set_location_assignment PIN_A17 -to SSG1[4]
+set_location_assignment PIN_A18 -to SSG1[5]
+set_location_assignment PIN_B17 -to SSG1[6]
+set_location_assignment PIN_B20 -to SSG2[0]
+set_location_assignment PIN_A20 -to SSG2[1]
+set_location_assignment PIN_B19 -to SSG2[2]
+set_location_assignment PIN_A21 -to SSG2[3]
+set_location_assignment PIN_B21 -to SSG2[4]
+set_location_assignment PIN_C22 -to SSG2[5]
+set_location_assignment PIN_B22 -to SSG2[6]
+set_location_assignment PIN_C10 -to input[0]
+set_location_assignment PIN_C11 -to input[1]
+set_location_assignment PIN_D12 -to input[2]
+set_location_assignment PIN_C12 -to input[3]
+set_location_assignment PIN_A12 -to input[4]
+set_location_assignment PIN_B12 -to input[5]
+set_location_assignment PIN_A13 -to input[6]
+set_location_assignment PIN_A14 -to input[7]
+set_location_assignment PIN_B14 -to input[8]
+set_location_assignment PIN_F15 -to input[9]
+set_location_assignment PIN_B8 -to button0
+set_location_assignment PIN_A7 -to button1
+set_location_assignment PIN_N5 -to clk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

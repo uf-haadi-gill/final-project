@@ -48,7 +48,7 @@ TL : entity work.topLevel
         rst <= '0';
 
         -- set inport 0 value
-        switch_input <= "0000110010";
+        switch_input <= "0110000000";
         buttons <= "10";
 
         clk <= '1';
@@ -60,7 +60,7 @@ TL : entity work.topLevel
         wait for 40 ns;
         
 
-        switch_input <= "0000001010";
+        switch_input <= "0000011000";
         buttons <= "01";
         
         clk <= '1';
@@ -82,7 +82,7 @@ TL : entity work.topLevel
 
         wait for 40 ns;
 
-        for k in 0 to 400 loop
+        for k in 0 to 1000 loop
             clk <= '1';
 
             wait for 40 ns;

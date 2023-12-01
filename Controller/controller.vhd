@@ -32,7 +32,7 @@ end controller;
 
 architecture logic of controller is
     
-    type state is ( fetch_1, fetch_2, jump, decode, branch,       -- all take 1 clock cycle
+    type state is ( fetch_1, fetch_2, jump, decode, branch, branch_2,       -- all take 1 clock cycle
                     load_1,  load_2,  load_3, load_4,            -- load word is 4
                     store_1, store_2, rtype_1, rtype_2,          -- everything else is 2, all rtype grouped together
                     addi_1,  addi_2, subi_1, subi_2,             -- all immediate values need separate states
@@ -118,17 +118,17 @@ begin
                         next_state <= sltui_1;
 
                     when "101011" =>
-                        next_state <= store_1; 
-
+                    next_state <= store_1; 
+                    
                     when "100011" =>
-                        next_state <= load_1;
+                    next_state <= load_1;
 
                     when "000100" =>
-                        next_state <= branch;
+                    next_state <= branch;
 
                     when "000101" =>
                         next_state <= branch;
-
+                        
                     when "000110" =>
                         next_state <= branch;
 
@@ -142,12 +142,26 @@ begin
                         next_state <= jal_1;
 
                     when others =>
-                        next_state <= fetch_1;
+                    next_state <= fetch_1;
+                
+                    end case;
                     
-                end case;
+                    ALUSrcB <= "11";
+    
+            when branch =>
+                -- PCWriteCond <= '1';
+                -- PCSource <= "01";
+                -- ALUOp <= "11";
+                -- ALUSrcA <= '1';
+                next_state <= branch_2;--fetch_1;
 
-                ALUSrcB <= "11";
-
+            when branch_2 =>
+                PCWriteCond <= '1';
+                PCSource <= "01";
+                ALUOp <= "11";
+                ALUSrcA <= '1';
+                next_state <= fetch_1;
+                        
             when load_1 =>
                 ALUSrcA <= '1';
                 ALUSrcB <= "10";
@@ -155,7 +169,10 @@ begin
                 next_state <= load_2;
                 
             when load_2 =>
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
                 MemRead <= '1';
+                IorD <= '1';
                 next_state <= load_3;
 
             when load_3 =>
@@ -189,13 +206,6 @@ begin
                 RegWrite <= '1';
                 ALUSrcA <= '1';
                 RegDst <= '1';
-                next_state <= fetch_1;
-
-            when branch =>
-                PCWriteCond <= '1';
-                PCSource <= "01";
-                ALUOp <= "11";
-                ALUSrcA <= '1';
                 next_state <= fetch_1;
 
             when andi_1 =>
